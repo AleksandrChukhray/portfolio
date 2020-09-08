@@ -1,0 +1,33 @@
+@import "../utils/vars";
+
+html, body {
+  font-family: $font-family-glacial;
+  font-size: $base-font-size;
+  line-height: $base-line-height;
+}
+
+.clearfix:after {
+  content: " "; /* Older browser do not support empty content */
+  visibility: hidden;
+  display: block;
+  height: 0;
+  clear: both;
+}
+
+.fill {
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 10px;
+  color: rgba($black, 0);
+  display: inline-block;
+  animation: fadeOutColor 1s linear 2s forwards;
+
+  &:before {
+    content: '';
+    position: absolute;
+    background-color: $black;
+    top:0;
+    bottom: 0;
+    animation: text 2s linear 1s forwards;
+  }
+}

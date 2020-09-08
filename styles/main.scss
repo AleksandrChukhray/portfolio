@@ -1,0 +1,33 @@
+@import "~@fortawesome/fontawesome-free/css/all.min.css";
+
+@import "utils/libs";
+@import "utils/vars";
+@import "utils/mixins";
+@import "utils/fonts";
+@import "utils/reset";
+
+// base
+@import "base/global_style";
+@import "base/animation";
+@import "~bootstrap/dist/css/bootstrap-grid.min.css";
+//@import "base/grid";
+@import "base/ui-kit";
+
+// pages
+@import "pages/index";
+
+// modules
+@import "~glider-js/glider.min.css";
+@import "~basiclightbox/dist/basicLightbox.min.css";
+
+// particles
+@import "particles/header";
+@import "particles/filter";
+@import "particles/navigation";
+@import "particles/footer";
+@import "particles/socials";
+@import "particles/scroll-down";
+@import "particles/go-back";
+
+// media
+@import "base/media";

@@ -1,0 +1,27 @@
+{
+  "name": "create-next-app-default",
+  "version": "0.1.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "next",
+    "build": "next build",
+    "start": "next start"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@fortawesome/fontawesome-free": "^5.14.0",
+    "basiclightbox": "^5.0.3",
+    "bootstrap": "^4.5.0",
+    "glider-js": "^1.7.3",
+    "gray-matter": "^4.0.2",
+    "next": "^9.5.0",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "remark": "^12.0.1",
+    "remark-html": "^12.0.0",
+    "sass": "^1.26.10"
+  }
+}

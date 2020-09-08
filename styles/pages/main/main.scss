@@ -1,0 +1,95 @@
+@import "../../utils/vars";
+
+.main-page {
+  .projects {
+    margin: 0;
+  }
+}
+
+.section {
+  &--main {
+    overflow: hidden;
+    .container-fluid, .row {
+      height: 100%;
+    }
+
+    @media #{$viewport-992} {
+      .row > .col.align-self-center {
+        align-self: flex-end !important;
+
+        .socials {
+          &_item {
+            margin: 0 0 50px 0;
+          }
+
+          i {
+            font-size: 20px;
+          }
+        }
+      }
+    }
+  }
+}
+
+.main-text {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  justify-content: center;
+
+  &_wrap {
+    @media #{$viewport-768} {
+      flex: 0;
+    }
+  }
+
+  &_img_wrap {
+    @media #{$viewport-768} {
+      flex: 1 1 100px;
+      //max-width: 100px;
+    }
+    position: relative;
+  }
+
+  &_img {
+    width: 600px;
+
+    @media #{$viewport-992} {
+      width: 100%;
+      height: auto;
+    }
+
+    @media #{$viewport-768} {
+      position: absolute;
+      width: 600px;
+      height: auto;
+      top: 0;
+      bottom: 0;
+      left: -50px;
+      margin: auto;
+    }
+  }
+
+  &_header {
+    text-transform: uppercase;
+    font-family: $font-family-moolboran;
+    font-size: 36px;
+    line-height: 40px;
+    letter-spacing: 2px;
+
+    @media #{$viewport-768} {
+      font-size: 26px;
+      line-height: 30px;
+    }
+  }
+  &_body {
+    text-transform: uppercase;
+    letter-spacing: 2px;
+  }
+
+  &_header,
+  &_body {
+
+    margin: 10px 0;
+  }
+}

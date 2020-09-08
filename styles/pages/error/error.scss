@@ -1,0 +1,78 @@
+.section {
+  &--error {
+    flex: 1;
+    background: url("/static/img/cable.svg") bottom left no-repeat transparent;
+
+    @media #{$viewport-992} {
+      background-size: contain;
+    }
+
+    .container-fluid, .row {
+      height: 100%;
+    }
+  }
+}
+
+.error {
+  width: 90%;
+  margin: 0 auto;
+  position: relative;
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+
+  @media #{$viewport-992} {
+    width: 70%;
+  }
+
+  @media #{$viewport-768} {
+    flex-flow: column nowrap;
+    width: 90%;
+  }
+
+  @media #{$viewport-480} {
+
+  }
+
+  @media #{$viewport-320} {
+
+  }
+
+  &_item {
+    text-align: center;
+    flex: 1
+  }
+
+  &_code {
+    font-size: 100px;
+    line-height: 120px;
+    font-family: $font-family-moolboran;
+    font-weight: bold;
+    margin: 0 0 40px;
+  }
+
+  &_header {
+    font-size: 50px;
+    font-weight: bold;
+    font-family: $font-family-moolboran;
+    text-transform: uppercase;
+    line-height: 60px;
+    margin: 0 0 40px;
+  }
+
+  &_subheader {
+    font-size: 18px;
+    margin: 0 0 40px;
+  }
+
+  &_button {
+
+  }
+
+  &_image {
+    svg {
+      width: 100% !important;
+      height: auto !important;
+    }
+  }
+}

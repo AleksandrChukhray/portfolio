@@ -1,0 +1,18 @@
+.go-back{
+  &_text {
+    display: inline-block;
+    text-transform: uppercase;
+    line-height: 50px;
+    padding: 0 20px;
+    letter-spacing: 2px;
+  }
+
+  &_arrow {
+    vertical-align: 5px;
+    display: inline-block;
+    width: 100px;
+    height: 1px;
+    line-height: 50px;
+    background-color: $black;
+  }
+}

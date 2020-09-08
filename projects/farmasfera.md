@@ -1,0 +1,27 @@
+---
+title: 'Web-site farmasfera.com.ua'
+description: 'Simple pharmacy web-site on CMS OpenCart'
+keywords: 'web-site,opencart,pharmacy'
+date: '2016-01-01'
+name: 'farmasfera'
+smallStack: 'html,css,js/jquery'
+stack: 'php,mysql,cms opencart,html,css,js/jquery,adaptive,responsive,github,git'
+github: ''
+url: 'http://farmasfera.com.ua'
+role: 'front-end developer'
+images: '
+    /static/img/posts/farmasfera/inner-page-mobile.jpg,
+    /static/img/posts/farmasfera/inner-page-mobile-2.jpg,
+    /static/img/posts/farmasfera/main-page.jpg,
+    /static/img/posts/farmasfera/main-page-2.jpg
+'
+bgcImages: ''
+published: 'true'
+onMainPage: 'false'
+---
+
+- разработка/поддержка существующего функционала сайта
+- обновление дизайна сайта
+- обновление модулей
+- добавление нового функционала, к уже установленным модулям
+- разработка новых модулей

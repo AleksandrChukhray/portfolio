@@ -1,0 +1,77 @@
+// Grid
+$sm-screen-min: 320;
+$md-screen-min: 768;
+$lg-screen-min: 1024;
+$xl-screen-min: 1400;
+
+// Media query points
+$screen-320-max: 320;
+$screen-480-max: 480;
+$screen-768-max: 768;
+$screen-992-max: 992;
+$screen-1200-max: 1200;
+$screen-1400-max: 1400;
+
+$viewport-320: "only screen and (max-width: #{$screen-320-max}px)";
+$viewport-480: "only screen and (max-width: #{$screen-480-max}px)";
+$viewport-768: "only screen and (max-width: #{$screen-768-max}px)";
+$viewport-992: "only screen and (max-width: #{$screen-992-max}px)";
+$viewport-1200: "only screen and (max-width: #{$screen-1200-max}px)";
+$viewport-1400: "only screen and (max-width: #{$screen-1400-max}px)";
+
+$gutter-width: 30px;
+$mobile-gutter-reduce: 8px;
+$half-gutter-width: $gutter-width * 0.5;
+$gutter-compensation: ($gutter-width * 0.5) * -1; //+
+
+$grid-columns: 12;
+
+// Colors
+
+/**
+    darkerColor
+    darkColor
+    Color
+    Color33
+    ColorAA
+    Color3E
+    lightColor
+    lighterColor
+ */
+
+$black:     #1a1a1a;
+$white:     #f7f7f7;
+$black333:  #333;
+
+
+// Sizes
+$base-font-size:      16px;
+$base-line-height:    24px;
+$base-border-radius:  6px;
+
+// Fonts
+// -------------------------------
+//$font-family-moolboran:   'MoolBoran', sans-serif;
+$font-family-moolboran:   'Overlock', cursive;
+$font-family-glacial:     'GlacialIndifference', sans-serif;
+// -------------------------------
+
+// Animation
+// -------------------------------
+$mobile-nav-animation-time: 0.4s;
+$desktop-nav-animation-time: 0.3s;
+// -------------------------------
+
+// Transition
+// -------------------------------
+.transition {
+  transition: all $desktop-nav-animation-time ease;
+}
+// -------------------------------
+
+//-- Z-index master list
+//
+// Warning: Avoid customizing these values. They're used for a bird's eye view
+// of components dependent on the z-axis and are designed to all work together.
+//
+// Note: These variables are not generated into the Customizer.

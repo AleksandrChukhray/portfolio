@@ -1,0 +1,73 @@
+@import "../utils/vars";
+@import "../theme/theme";
+
+header {
+  position: fixed;
+  overflow: hidden;
+  background-color: transparent !important;
+  width: 100%;
+  z-index: 1000;
+
+  .block {
+    width: 80px;
+    height: 80px;
+    line-height: 90px;
+    text-align: center;
+    background-color: $white;
+    cursor: pointer;
+  }
+
+  .logo {
+    @extend .block;
+    color: $black;
+    float: left;
+  }
+
+  .menu {
+    @extend .block;
+    color: $black;
+    float: right;
+    position: relative;
+
+    &:hover {
+      .menu-item:nth-of-type(2) {
+        left: 0;
+        width: 40px;
+      }
+    }
+
+    &-item {
+      position: absolute;
+      left: 0;
+      right: 0;
+      margin: 0 auto;
+      display: block;
+      width: 40px;
+      height: 5px;
+      border-radius: 5px;
+      background-color: $black;
+      transition: all 0.5s ease;
+
+      &:first-child {
+        top: calc(50% + 10px);
+      }
+
+      &:nth-of-type(2) {
+        top: 50%;
+        left: 10px;
+        width: 30px;
+      }
+
+      &:last-child {
+        top: calc(50% - 10px);
+      }
+
+    }
+  }
+}
+
+@media #{$viewport-320} {
+  header {
+
+  }
+}

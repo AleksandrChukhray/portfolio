@@ -1,0 +1,152 @@
+.section {
+  &--contact {
+    flex: 1;
+
+    .container-fluid, .row {
+      height: 100%;
+    }
+  }
+}
+
+.contact-form {
+  width: 60%;
+  margin: 0 auto;
+  position: relative;
+
+  @media #{$viewport-1400} {
+    width: 90%;
+  }
+
+  @media #{$viewport-1200} {
+    width: 70%;
+  }
+
+  @media #{$viewport-992} {
+    width: 100%;
+  }
+
+  @media #{$viewport-768} {
+    margin-top: 100px;
+  }
+
+  &_header {
+    font-size: 100px;
+    line-height: 120px;
+    font-weight: bold;
+    font-family: $font-family-moolboran;
+    margin: 0 0 3rem;
+
+    @media #{$viewport-480} {
+      font-size: 80px;
+      line-height: 90px;
+      margin: 0 0 1rem;
+    }
+  }
+
+  &_text {
+    font-size: 18px;
+    line-height: 22px;
+    margin: 0 0 5rem;
+    letter-spacing: 1px;
+
+    @media #{$viewport-768} {
+      margin: 0 0 1rem;
+    }
+  }
+
+  &_wrapper {
+    display: flex;
+    flex-flow: row nowrap;
+
+    @media #{$viewport-768} {
+      flex-flow: column nowrap;
+    }
+  }
+
+  &_contacts {
+
+  }
+
+  &_item {
+    width: 50%;
+
+    @media #{$viewport-768} {
+      width: 100%;
+      margin: 20px 0;
+    }
+  }
+}
+
+.contacts {
+  &_item {
+    line-height: 40px;
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    margin: 0 0 20px;
+
+    &:last-child {
+      margin: 0;
+    }
+  }
+
+  &_text {
+    display: inline-block;
+    margin-left: 20px;
+  }
+
+  &_icon {
+    display: inline-block;
+  }
+
+  &_form {
+
+  }
+}
+
+.form {
+  position: relative;
+  .input,
+  .textarea {
+    width: 100%;
+    background-color: $white;
+    line-height: 40px;
+    font-family: $font-family-moolboran;
+    font-size: 16px;
+    margin: 0;
+    padding: 0;
+    outline: none;
+    border: none;
+  }
+
+  .textarea {
+    height: 200px;
+    resize: none;
+  }
+
+
+
+  &_input {
+    margin: 0 0 20px;
+    padding: 0 10px;
+    border: 1px solid $black;
+
+    &:last-child {
+      margin: 0;
+    }
+
+    &--input {
+
+    }
+
+    &--textarea {
+
+    }
+
+    &--button {
+      float: right;
+      border: none;
+      padding: 0;
+    }
+  }
+}

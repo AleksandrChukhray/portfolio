@@ -1,0 +1,15 @@
+.socials {
+  &_item {
+    margin: 0 0 80px 15px;
+  }
+
+  @media #{$viewport-992} {
+    &_item {
+      margin: 0 0 50px 0;
+    }
+
+    i {
+      font-size: 20px;
+    }
+  }
+}

@@ -1,0 +1,11 @@
+.filter{
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+
+  &_items {
+    cursor: pointer;
+    font-size: 18px;
+    margin: 0 20px 0;
+  }
+}

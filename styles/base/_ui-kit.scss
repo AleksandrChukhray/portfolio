@@ -1,0 +1,182 @@
+@import "../utils/vars";
+@import "../theme/theme";
+
+.animation-link {
+  position: relative;
+
+  &:after {
+    content: "";
+    position: absolute;
+    display: block;
+    left: 0;
+    right: 0;
+    bottom: -1px;
+    height: 0.5px;
+
+    @include themify($themes) {
+      background: themed('linkColor');
+    }
+    transform-origin: 100% 0;
+    transform: scaleX(0);
+    animation: line_hover_out .5s cubic-bezier(.785, .135, .15, .86) both;
+  }
+}
+
+.header-font {
+  font-family: $font-family-glacial;
+  font-weight: bold;
+  text-transform: uppercase;
+
+  @include themify($themes) {
+    color: themed('headerTextColor');
+  }
+}
+
+h1, .h1 {
+  @extend .header-font;
+  font-size: 60px;
+}
+
+h2, .h2 {
+  @extend .header-font;
+  font-size: 56px;
+}
+
+h3, .h3 {
+  @extend .header-font;
+  font-size: 46px;
+}
+
+h4, .h4 {
+  @extend .header-font;
+  font-size: 36px;
+}
+
+h5, .h5 {
+  @extend .header-font;
+  font-size: 26px;
+}
+
+h6, .h6 {
+  @extend .header-font;
+  font-size: 16px;
+}
+
+.text {
+  &_header {
+
+  }
+
+  &_body {
+
+  }
+}
+
+.link {
+  color: $black;
+  text-decoration: none;
+  font-family: $font-family-moolboran;
+  font-weight: bold;
+  @include themify($themes) {
+    color: themed('linkColor');
+  }
+
+  &:link {
+
+  }
+
+  &:active {
+
+  }
+
+  &:visited {
+
+  }
+}
+
+.button {
+  display: inline-block;
+  text-align: center;
+  cursor: pointer;
+  padding: 20px 50px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-family: $font-family-moolboran;
+  font-weight: bold;
+  @extend .transition;
+
+  @include themify($themes) {
+    border: 1px solid themed('linkColor');
+    color: themed('linkColor');
+  }
+
+  &:hover,
+  &--active {
+    @include themify($themes) {
+      color: themed('backgroundColor');
+      background-color: themed('linkColor');
+    }
+  }
+
+  @media #{$viewport-480} {
+    padding: 10px 20px;
+    margin-bottom: 10px !important;
+    width: 100%;
+  }
+
+  @media #{$viewport-320} {
+
+  }
+}
+
+.image {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+.image-center {
+  position: relative;
+
+  &:before {
+    content: " ";
+    display: inline-block;
+    height: 100%;
+    width: 1%;
+    vertical-align: middle;
+  }
+
+  img {
+    display: inline-block;
+    vertical-align: middle;
+  }
+}
+
+.transform-text-left {
+  position: absolute;
+  width: 240px;
+  height: 50px;
+  bottom: 0;
+  top: 0;
+  left: -95px;
+  margin: auto;
+  transform-origin: center;
+  transform: rotate(-90deg);
+}
+
+
+@media #{$viewport-320} {
+
+}
+
+@media #{$viewport-480} {
+
+}
+
+@media #{$viewport-768} {
+
+}
+
+@media #{$viewport-992} {
+
+}

@@ -1,0 +1,352 @@
+@import "vars";
+
+/* Mixins:
+   ========================================================================== */
+
+// px to rem
+@function rem($pixels, $context: $mainFontSize) {
+  @if (unitless($pixels)) {
+    $pixels: $pixels * 1px;
+  }
+  @if (unitless($context)) {
+    $context: $context * 1px;
+  }
+  @return $pixels / $context * 1rem;
+}
+
+// size to one line
+@mixin size($width, $height: $width) {
+  width: $width;
+  height: $height;
+}
+
+// placeholder helper
+@mixin placeholder {
+  ::-webkit-input-placeholder {
+    @content;
+  }
+  :-moz-placeholder {
+    @content;
+  }
+  ::-moz-placeholder {
+    @content;
+  }
+  :-ms-input-placeholder {
+    @content;
+  }
+}
+
+@mixin make-grid-columns($i: 1, $infix: '') {
+  @if $infix != '' {
+    $infix: -#{$infix};
+  }
+
+  .col#{$infix} {
+    flex-grow: 1;
+    flex-basis: 0;
+    max-width: 100%;
+  }
+
+  // Set cols and offsets sizes
+  @for $i from 1 through $grid-columns {
+
+    $size: (100% / ($grid-columns / $i));
+
+    .col#{$infix}-#{$i} {
+      flex-basis: $size;
+      max-width: $size;
+    }
+
+    .col-offset#{$infix}-#{$i} {
+      margin-left: $size;
+    }
+  }
+
+  // Extra classes
+  @include extraClasses($infix);
+}
+
+@mixin extraClasses($infix) {
+  @if $infix == '' {
+    $infix: '-col';
+  }
+
+  .stretch#{$infix} {
+    justify-content: stretch;
+  }
+
+  .start#{$infix} {
+    justify-content: flex-start;
+    text-align: start;
+  }
+
+  .center#{$infix} {
+    justify-content: center;
+    text-align: center;
+  }
+
+  .end#{$infix} {
+    justify-content: flex-end;
+    text-align: end;
+  }
+
+  .top#{$infix} {
+    align-items: flex-start;
+  }
+
+  .middle#{$infix} {
+    align-items: center;
+  }
+
+  .bottom#{$infix} {
+    align-items: flex-end;
+  }
+
+  .around#{$infix} {
+    justify-content: space-around;
+  }
+
+  .between#{$infix} {
+    justify-content: space-between;
+  }
+
+  .column-between#{$infix} {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .first#{$infix} {
+    order: -1;
+  }
+
+  .last#{$infix} {
+    order: 1;
+  }
+
+  .hidden#{$infix} {
+    display: none;
+  }
+
+  .visible#{$infix} {
+    display: block;
+  }
+}
+
+/* Fonts Helpers:
+   ========================================================================== */
+
+/*
+  By default template support only modern format fonts
+  Without svg. Only: .woff, .woffs
+  if ypu need svg comments lines bellow and uncomments "Fonts helper all format fonts"
+
+  Usage:
+    1. Put your font to `src/assets/fonts/FOLDERNAME/FONTNAME`
+      FOLLOW: Files Required
+      Example: .woff, .woffs formats
+    2. Go to fonts.scss
+    3. Use mixon
+      Example: @include font-face("OpenSans", "../fonts/OpenSans/opensans");
+
+    Required parameters: @family, @family
+    Minor parameters: @weight, @style, @pipeline
+
+    Example Base:
+      @include font-face("OpenSans", "../fonts/OpenSans/opensans");
+    Example Situation:
+      @include font-face("OpenSans", "../fonts/OpenSans/opensansItalic", 400, italic);
+*/
+
+// Default: For modern format fonts
+// Files Required: .woff, .woffs
+
+//@mixin font-face(
+//  $font-family,
+//  $file-path,
+//  $weight: normal,
+//  $style: normal,
+//  $asset-pipeline: false
+//) {
+//  @font-face {
+//    font-family: $font-family;
+//    font-weight: $weight;
+//    font-style: $style;
+//
+//    src: url("#{$file-path}.woff") format("woff"),
+//      url("#{$file-path}.woff2") format("woff2");
+//  }
+//}
+
+// For Modern format fonts + .svg
+// Files Required: .woff, .woffs, .svg
+
+
+// @mixin font-face(
+//   $font-family,
+//   $file-path,
+//   $weight: normal,
+//   $style: normal,
+//   $asset-pipeline: false
+// ) {
+//   @font-face {
+//     font-family: $font-family;
+//     font-weight: $weight;
+//     font-style: $style;
+
+//     src: url("#{$file-path}.eot?#iefix") format("embedded-opentype"),
+//       url("#{$file-path}.woff") format("woff"),
+//       url("#{$file-path}.woff2") format("woff2"),
+//       url("#{$file-path}.svg") format("svg"),
+//       url("#{$file-path}.ttf") format("truetype");
+//   }
+// }
+
+// For Modern format fonts + .svg
+// Files Required: eot. .woff, .woffs, .svg, .ttf
+
+ @mixin font-face(
+   $font-family,
+   $file-path,
+   $weight: normal,
+   $style: normal,
+   $asset-pipeline: false
+ ) {
+   @font-face {
+     font-family: $font-family;
+     font-weight: $weight;
+     font-style: $style;
+     src: url("#{$file-path}.eot?#iefix") format("embedded-opentype"),
+       url("#{$file-path}.woff") format("woff"),
+       //url("#{$file-path}.woff2") format("woff2"),
+       url("#{$file-path}.svg") format("svg"),
+       url("#{$file-path}.ttf") format("truetype");
+   }
+ }
+
+@mixin btn-border-slide($color, $hoverColor, $borderWidth, $time) {
+  $easing: cubic-bezier(0.4, 0, 0.2, 1);
+  overflow: hidden;
+
+  &:before,
+  &:after {
+    content: "";
+    position: absolute;
+    left: 0;
+
+    height: $borderWidth;
+    width: 100%;
+
+    background-color: $color;
+  }
+
+  &:before {
+    top: 0;
+  }
+
+  &:after {
+    bottom: 0;
+  }
+
+  &:hover {
+    & > span {
+      & > span {
+
+        &:before,
+        &:after {
+          transform: translate3d(0, 0, 0);
+        }
+
+        & > span {
+          &:before,
+          &:after {
+            transform: translate3d(0, 0, 0);
+          }
+        }
+      }
+    }
+  }
+
+  & > span {
+
+    &:before,
+    &:after {
+      content: "";
+      position: absolute;
+      top: 0;
+
+      height: 100%;
+      width: $borderWidth;
+
+      background-color: $color;
+    }
+
+    &:before {
+      left: 0;
+    }
+
+    &:after {
+      right: 0;
+    }
+
+    & > span {
+
+      &:before,
+      &:after {
+        content: "";
+        position: absolute;
+        left: 0;
+        z-index: 9;
+
+        height: $borderWidth;
+        width: 100%;
+
+        background-color: $hoverColor;
+      }
+
+      &:before {
+        top: 0;
+
+        transform: translate3d(-105%, 0, 0);
+        transition: transform $time $easing;
+      }
+
+      &:after {
+        bottom: 0;
+
+        transform: translate3d(105%, 0, 0);
+        transition: transform $time $easing;
+      }
+
+      & > span {
+
+        &:before,
+        &:after {
+          content: "";
+          position: absolute;
+          top: 0;
+          z-index: 9;
+
+          height: 100%;
+          width: $borderWidth;
+
+          background-color: $hoverColor;
+        }
+
+        &:before {
+          left: 0;
+
+          transform: translate3d(0, 105%, 0);
+          transition: transform $time $easing;
+        }
+
+        &:after {
+          right: 0;
+
+          transform: translate3d(0, -105%, 0);
+          transition: transform $time $easing;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,36 @@
+@import "../../utils/vars";
+.main-page{
+  .section {
+    &--contact {
+      background-color: $black333 !important;
+    }
+  }
+}
+
+.contact-us {
+  height: 400px;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  background-color: $black333;
+
+  &_header {
+    font-family: $font-family-moolboran;
+    font-weight: bold;
+    font-size: 80px;
+    line-height: 100px;
+    color: $white;
+  }
+
+  &_sub-header {
+    font-size: 18px;
+    line-height: 1.5;
+    color: $white;
+    letter-spacing: 2px;
+  }
+
+  &_button {
+    margin: 40px 0;
+  }
+}

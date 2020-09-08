@@ -1,0 +1,31 @@
+.scroll-down{
+  transform: rotate(90deg);
+  position: absolute;
+  width: 240px;
+  height: 50px;
+  bottom: 95px;
+  right: -95px;
+
+  &_text {
+    display: inline-block;
+    text-transform: uppercase;
+    line-height: 50px;
+    letter-spacing: 2px;
+  }
+
+  &_arrow {
+    vertical-align: 5px;
+    margin-left: 10px;
+    display: inline-block;
+    width: 100px;
+    height: 1px;
+    line-height: 50px;
+    background-color: $black;
+  }
+
+  @media #{$viewport-992} {
+    right: 0;
+    left: 0;
+    margin: 0 auto;
+  }
+}

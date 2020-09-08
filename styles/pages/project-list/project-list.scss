@@ -1,0 +1,57 @@
+.section {
+  &--projects-list-page {
+    flex: 1;
+
+    .container-fluid, .row {
+      height: 100%;
+    }
+  }
+}
+
+.projectsListPage {
+  .footer {
+    &--inner {
+      position: fixed;
+      bottom: 0;
+      z-index: 1000;
+      background-color: $white;
+    }
+  }
+}
+
+.projects {
+  margin: 50px 0;
+
+  &_image {
+    display: block;
+    margin: 0 auto;
+  }
+
+  &_filter {
+    padding: 50px 0;
+  }
+
+  &_list {
+
+  }
+}
+
+@media #{$viewport-1200} {
+
+}
+
+@media #{$viewport-992} {
+
+}
+
+@media #{$viewport-768} {
+
+}
+
+@media #{$viewport-480} {
+
+}
+
+@media #{$viewport-320} {
+
+}

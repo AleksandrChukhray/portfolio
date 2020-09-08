@@ -1,0 +1,47 @@
+.section {
+  &--slogan {
+    .container-fluid, .row {
+      height: 100%;
+    }
+
+    .col {
+      text-align: center;
+    }
+  }
+}
+
+.slogan {
+  display: inline-block;
+  text-align: left;
+
+  &_header {
+    font-size: 150px;
+    line-height: 170px;
+    font-family: $font-family-moolboran;
+    letter-spacing: 2px;
+
+    @media #{$viewport-768} {
+      font-size: 100px;
+      line-height: 120px;
+    }
+
+    span {
+      display: inline-block;
+      width: 100px;
+      height: 10px;
+      border-radius: 6px;
+      animation: fadeOutBGC 1s linear 2s forwards;
+      vertical-align: 35px;
+
+      @media #{$viewport-768} {
+        height: 5px;
+      }
+    }
+  }
+
+  &_body {
+    font-size: 18px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+  }
+}

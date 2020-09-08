@@ -1,0 +1,31 @@
+@import "main/main";
+@import "main/slogan";
+@import "main/contacts";
+@import "main/projects";
+
+@import "about/about";
+
+@import "contact/contact";
+
+@import "error/error";
+
+@import "project/project";
+
+@import "project-list/project-list";
+
+.section {
+  position: relative;
+
+  &--full-height {
+    height: 100vh;
+  }
+}
+
+.content-wrapper{
+  &--inner-page,
+  &--error-page {
+    height: 100vh;
+    display: flex;
+    flex-flow: column nowrap;
+  }
+}
