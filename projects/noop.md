@@ -17,11 +17,15 @@ images: '
     /static/img/posts/noop/inner-page.jpg,
     /static/img/posts/noop/inner-page-mobile-1.jpg,
     /static/img/posts/noop/inner-page-mobile-2.jpg,
-    /static/img/posts/noop/inner-page-mobile-3.jpg,
+    /static/img/posts/noop/inner-page-mobile-3.jpg
 '
 bgcImages: ''
 published: 'true'
 onMainPage: 'false'
 ---
-
+Блог интернет-маркетолога из Голландии
+<br>
+<br>
+Обязанности: 
 - верстка psd-макетов
+- интеграция верстки на CMS Wordpress

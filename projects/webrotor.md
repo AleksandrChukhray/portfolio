@@ -6,7 +6,7 @@ date: '2017-07-01'
 name: 'Webrotor'
 smallStack: 'html,css,js/jquery'
 stack: 'html,css,js/jquery,responsive,adaptive,git,github'
-github: ''
+github: 'https://github.com/AleksandrChukhray/webrotro'
 url: ''
 role: 'front-end developer'
 images: '
@@ -22,5 +22,8 @@ bgcImages: ''
 published: 'true'
 onMainPage: 'false'
 ---
-
+Сайт-визитка веб-студии.
+<br>
+<br>
+Обязанности:
 -верстка psd-макетов

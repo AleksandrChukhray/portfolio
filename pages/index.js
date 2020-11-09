@@ -71,7 +71,7 @@ function SloganSection() {
                             </div>
                             <br/>
                             <div className="slogan_header fill">
-                                love <span></span>
+                                love <span/>
                             </div>
                             <br/>
                             <div className="slogan_body fill">
@@ -87,35 +87,6 @@ function SloganSection() {
 }
 
 function ProjectsList({ allProjectsData }) {
-    const projects1 = [
-        {
-            image: null,
-            name: 'Yoga web design concept',
-            stack: 'web design / ui design'
-        },
-        {
-            image: null,
-            name: 'KOKO: A music player app',
-            stack: 'ui design / mobile app'
-        },
-        {
-            image: null,
-            name: 'DHVTSU Web design concept',
-            stack: 'web design / ui design'
-        },
-        {
-            image: null,
-            name: 'Logofolio',
-            stack: 'graphic design / illustration'
-        },
-        {
-            image: null,
-            name: 'Yoga web design concept',
-            stack: 'web design / ui design'
-        },
-    ]
-
-    const projects = allProjectsData || [];
 
     return (
         <section className="theme-light section section--projects">

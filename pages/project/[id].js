@@ -87,7 +87,7 @@ export default function Project({ allProjectsData }) {
                                     </div>
                                     <div className="project-page_buttons">
                                         {allProjectsData.github && <a href={allProjectsData.github} target={'_blank'} className="button button--download">View on Github</a>}
-                                        <a href={allProjectsData.url || '/' } target={'_blank'} className="button button button--projects">Live view</a>
+                                        {allProjectsData.url && <a href={ allProjectsData.url } target={'_blank'} className="button button button--projects">Live view</a>}
                                     </div>
                                 </div>
                             </div>
@@ -128,7 +128,6 @@ export async function getStaticPaths() {
 }
 
 export async function getStaticProps({ params }) {
-    console.log('project page', params.id)
     const allProjectsData = await getProjectData(params.id)
     return {
         props: {

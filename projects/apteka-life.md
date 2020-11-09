@@ -5,7 +5,7 @@ keywords: 'web-site, opencart, pharmacy'
 date: '2016-01-01'
 name: 'apteka.life'
 smallStack: 'html,css,js/jquery'
-stack: 'php,mysql,cms opencart,html,css,js/jquery,adaptive,responsive,github,git'
+stack: 'php,mysql,cms opencart,html,css,bootstrap,js/jquery,adaptive,responsive,github,git'
 github: ''
 url: 'https://apteka.life'
 role: 'front-end developer'
@@ -21,9 +21,12 @@ bgcImages: ''
 published: 'true'
 onMainPage: 'false'
 ---
-
-- разработка/поддержка существующего функционала сайта
-- обновление дизайна сайта
-- обновление модулей
+Интернет-магазин по продаже лекарственных препаратов.
+<br>
+<br>
+Обязанности:
+- разработка/поддержка сайта
+- обновление дизайна
+- обновление opencart-модулей
 - добавление нового функционала, к уже установленным модулям
 - разработка новых модулей

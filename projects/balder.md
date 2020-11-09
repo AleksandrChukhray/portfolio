@@ -5,7 +5,7 @@ keywords: 'web-site, prestashop, security, alarm systems'
 date: '2016-05-01'
 name: 'balter.de'
 smallStack: 'html,css,js/jquery'
-stack: 'php,mysql,cms prestashop,html,css,js/jquery,adaptive,responsive,github,git'
+stack: 'php,mysql,cms prestashop,html,css,bootstrap,js/jquery,adaptive,responsive,github,git'
 github: ''
 url: 'https://balter.de'
 role: 'front-end developer'
@@ -21,6 +21,9 @@ bgcImages: ''
 published: 'true'
 onMainPage: 'true'
 ---
-
+Интернет-магазин по продаже систем видеонаблюдения.
+<br>
+<br>
+Обязанности:
 - обновление дизайна сайта
-- доработка существующего функционала, в основном jquery скрипты
+- добавления нового функционала (js/jquery)

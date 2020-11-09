@@ -7,7 +7,7 @@ name: '24.farm'
 smallStack: 'html,css,js/jquery'
 github: ''
 url: 'https://24.farm'
-stack: 'php,mysql,cms opencart,html,css,js/jquery,adaptive,responsive,github,git'
+stack: 'php,mysql,cms opencart,html,css,bootstrap,js/jquery,adaptive,responsive,github,git'
 role: 'front-end developer'
 images: '
     /static/img/posts/24-farm/inner-page.jpg,
@@ -21,9 +21,12 @@ bgcImages: ''
 published: 'true'
 onMainPage: 'true'
 ---
-
-- разработка/поддержка существующего функционала сайта
-- обновление дизайна сайта
+Интернет-магазин по продаже лекарственных препаратов.
+<br>
+<br>
+Обязанности:
+- разработка/поддержка сайта
+- обновление дизайна
 - обновление модулей
 - добавление нового функционала, к уже установленным модулям
 - разработка новых модулей

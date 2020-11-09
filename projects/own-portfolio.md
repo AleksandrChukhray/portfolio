@@ -6,8 +6,8 @@ date: '2020-07-22'
 name: 'Own portfolio'
 smallStack: 'react,nuxt.js'
 stack: 'pug,sass,js,react,bootstrap,nuxt.js,adaptive,responsive,git,github,yarn'
-github: ''
-url: ''
+github: 'https://github.com/AleksandrChukhray/portfolio'
+url: '/'
 role: 'front-end developer'
 images: '
     /static/img/posts/own-portfolio/main-page.jpg,
@@ -22,8 +22,11 @@ bgcImages: ''
 published: 'true'
 onMainPage: 'true'
 ---
-
+Сайт-портфолио для фронтенд программиста.
+<br>
+<br>
+Обязанности:
 - верстка макетов по одному из понравившихся дизайнов
-- интеграция верстки в react и nuxt.js
+- интеграция верстки в reactjs и nuxt.js
 - наполнение сайта информацией
 - размещение сайта на хостинге

@@ -41,7 +41,21 @@
 @include font-face("GlacialIndifference", "/static/fonts/GlacialIndifference-Italic", 400, italic);
 @include font-face("GlacialIndifference", "/static/fonts/GlacialIndifference-Regular");
 
+@include font-face('Uni Neue', "/static/fonts/unineue/UniNeueHeavy", 800, normal);
+@include font-face('Uni Neue Book', "/static/fonts/unineue/UniNeueBook");
+@include font-face('Uni Neue', "/static/fonts/unineue/UniNeueRegular", 500, normal);
+@include font-face('Uni Neue', "/static/fonts/unineue/UniNeueLight-Italic", 300, italic);
+@include font-face('Uni Neue', "/static/fonts/unineue/UniNeueLight", 300, normal);
+@include font-face('Uni Neue', "/static/fonts/unineue/UniNeueBold", bold, normal);
+@include font-face('Uni Neue', "/static/fonts/unineue/UniNeueHeavy-Italic", 800, italic);
+@include font-face('Uni Neue Book', "/static/fonts/unineue/UniNeueBook-Italic", normal, italic);
+@include font-face('Uni Neue', "/static/fonts/unineue/UniNeueBlack-Italic", 900, italic);
+@include font-face('Uni Neue', "/static/fonts/unineue/UniNeueBold-Italic", bold, italic);
+@include font-face('Uni Neue', "/static/fonts/unineue/UniNeueRegular-Italic", 500, italic);
+@include font-face('Uni Neue', "/static/fonts/unineue/UniNeueThin", 100, normal);
+@include font-face('Uni Neue', "/static/fonts/unineue/UniNeueBlack", 900, normal);
+@include font-face('Uni Neue', "/static/fonts/unineue/UniNeueThin-Italic", 100, italic);
+
 // MoolBoran
 //@include font-face("MoolBoran", "/assets/fonts/MoolBoran");
-
 @import url('https://fonts.googleapis.com/css2?family=Overlock:wght@400;700&display=swap');
