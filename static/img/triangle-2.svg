@@ -1,0 +1,27 @@
+<svg
+        xmlns="http://www.w3.org/2000/svg"
+        version="1.1"
+        width="400"
+        height="400"
+        viewBox="0 0 400 400"
+        xml:space="preserve">
+    <desc>Created with Fabric.js 4.2.0</desc>
+    <defs>
+    </defs>
+    <g transform="matrix(1 0 0 1 200 200)" id="4f733dd7-885e-4f7c-aa80-c6e9460945bf">
+    <rect style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-dashoffset: 0; stroke-linejoin: miter; stroke-miterlimit: 4; fill: rgb(255,255,255); fill-opacity: 0; fill-rule: nonzero; opacity: 1;"
+          vector-effect="non-scaling-stroke" x="-200" y="-200" rx="0" ry="0" width="400" height="400"/>
+    </g>
+        <g transform="matrix(Infinity NaN NaN Infinity 0 0)" id="7f4a6bd6-43d1-4957-a7a1-9b2f5ba2af15">
+    </g>
+    <g transform="matrix(2.14 0 0 2.14 200 200)" id="5858852f-9a5a-40ff-a717-50b729c29ebb">
+<polygon
+        style="stroke: rgb(0,0,0); stroke-width: 0; stroke-dasharray: none; stroke-linecap: butt; stroke-dashoffset: 0; stroke-linejoin: miter; stroke-miterlimit: 4; fill: rgb(101,101,101); fill-rule: nonzero; opacity: 1;"
+        vector-effect="non-scaling-stroke" points="-37.43,32.41 0,-32.41 37.43,32.41 "/>
+</g>
+    <g transform="matrix(2.14 0 0 2.14 200 200)" id="d7c005d1-e984-4b91-947b-242c59c70a87">
+<polygon
+        style="stroke: rgb(0,0,0); stroke-width: 4; stroke-dasharray: none; stroke-linecap: butt; stroke-dashoffset: 0; stroke-linejoin: miter; stroke-miterlimit: 4; fill: rgb(255,255,255); fill-opacity: 0; fill-rule: nonzero; opacity: 1;"
+        vector-effect="non-scaling-stroke" points="-37.43,32.41 0,-32.41 37.43,32.41 "/>
+</g>
+</svg>

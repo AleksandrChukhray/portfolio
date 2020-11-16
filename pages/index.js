@@ -1,17 +1,18 @@
-import { useState } from 'react';
+import {useState} from 'react';
 import Link from 'next/link';
 import Head from '../components/head';
 import MainLayout from "../components/layouts/main";
 import Socials from "../components/socials";
 import ScrollDown from "../components/navigation/scroll-down";
-import { getSortedProjectsData } from "../lib/projets";
-import { useScrollPosition } from "../components/effects/scroll";
+import ScrollToTop from "../components/navigation/scroll-to-top";
+import {getSortedProjectsData, getBGColor, radialGradient} from "../lib/projets";
+import {useScrollPosition} from "../components/effects/scroll";
 
 export default function Home({allProjectsData}) {
     const [hideOnScroll, setHideOnScroll] = useState(0)
 
     useScrollPosition(
-        ({ prevPos, currPos }) => {
+        ({currPos}) => {
             setHideOnScroll(Math.abs(currPos.y))
         },
         [hideOnScroll],
@@ -23,7 +24,7 @@ export default function Home({allProjectsData}) {
     return (
         <MainLayout clasName={'main-page'}>
             <Head title="Home"/>
-            <MainSection scrollTop={hideOnScroll} />
+            <MainSection scrollTop={hideOnScroll}/>
             <SloganSection/>
             <ProjectsList allProjectsData={allProjectsData}/>
             <ContactMe/>
@@ -31,7 +32,7 @@ export default function Home({allProjectsData}) {
     )
 };
 
-function MainSection({ scrollTop }) {
+function MainSection({scrollTop}) {
     return (
         <section className="theme-light section section--main section--full-height">
             <div className="container-fluid">
@@ -53,6 +54,7 @@ function MainSection({ scrollTop }) {
                     <div className="col">
                         <ScrollDown scrollTop={scrollTop}/>
                     </div>
+                    <ScrollToTop scrollY={scrollTop}/>
                 </div>
             </div>
         </section>
@@ -86,30 +88,30 @@ function SloganSection() {
     )
 }
 
-function ProjectsList({ allProjectsData }) {
+function ProjectsList({allProjectsData}) {
 
     return (
         <section className="theme-light section section--projects">
             <div className="projects">
                 {allProjectsData.filter(el => el.published === 'true' && el.onMainPage === 'true').map((el, index) => (
-                            <div className="project" key={el.name}>
-                                <div className="project_image"/>
-                                <div className="line"/>
-                                <div className="project_numbers">{`0${index + 1}`}</div>
-                                <div className="project_wrap">
-                                    <div className="project_name"> {el.name} </div>
-                                    <div className="project_stack"> {el.smallStack} </div>
-                                </div>
-                                <Link href="/project/[id]" as={`/project/${el.id}`}>
-                                    <a className="project_button">
-                            <span>
-                                <span>view project <i className="project_button_arrow"></i></span>
-                            </span>
-                                    </a>
-                                </Link>
-                                <div className="project_button-background"/>
+                        <div className="project" key={el.name}>
+                            <div className="project_image" style={{backgroundImage: radialGradient(getBGColor(el.name))}}/>
+                            <div className="line"/>
+                            <div className="project_numbers">{`0${index + 1}`}</div>
+                            <div className="project_wrap">
+                                <div className="project_name"> {el.name} </div>
+                                <div className="project_stack"> {el.smallStack} </div>
                             </div>
-                        )
+                            <Link href="/project/[id]" as={`/project/${el.id}`}>
+                                <a className="project_button">
+                                        <span>
+                                            <span>view project <i className="project_button_arrow"/></span>
+                                        </span>
+                                </a>
+                            </Link>
+                            <div className="project_button-background"/>
+                        </div>
+                    )
                 )}
             </div>
         </section>

@@ -213,7 +213,7 @@
     transform: scaleX(0);
   }
 
-  &:hover {
+  &:hover, &.hover {
     &:after {
       animation: line_hover_in .5s cubic-bezier(.785,.135,.15,.86) both;
     }

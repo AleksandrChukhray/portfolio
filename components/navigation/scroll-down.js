@@ -1,4 +1,4 @@
-import {useEffect, createRef} from 'react';
+import {createRef} from 'react';
 const scroll = createRef();
 
 function ScrollDown({ scrollTop }){
