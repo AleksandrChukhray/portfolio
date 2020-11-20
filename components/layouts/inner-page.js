@@ -2,12 +2,12 @@ import { string } from 'prop-types';
 import Header from "../header";
 import InnerFooter from "../inner-footer";
 
-const InnerLayout = ({ children, className }) => (
+const InnerLayout = ({ children, className, path }) => (
     <div className={className}>
         <Header/>
         <div className="content-wrapper--inner-page">
             {children}
-            <InnerFooter />
+            <InnerFooter path={path}/>
         </div>
     </div>
 )
