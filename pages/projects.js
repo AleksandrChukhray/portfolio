@@ -6,11 +6,13 @@ import {getScrollPosition, useScrollPosition} from "../components/effects/scroll
 import {getSortedProjectsData, getBGColor, radialGradient} from "../lib/projets";
 import {addClass, removeClass} from "../lib/fade";
 import ScrollToTop from "../components/navigation/scroll-to-top";
+import { i18n, withTranslation } from '../i18n'
 
 const projectList = createRef();
 
-export default function Projects({allProjectsData}) {
+function Projects({allProjectsData, t }) {
     const data = allProjectsData.filter(el => el.published === 'true');
+
     let [filteredData, changeFilteredData] = useState(data);
     let [selectedTech, changeSelectedTech] = useState(null);
     let [showOnScroll, setHideOnScroll] = useState(0)
@@ -84,7 +86,7 @@ export default function Projects({allProjectsData}) {
 
     return (
         <InnerLayout clasName={'main-page'}>
-            <Head title="Projects"/>
+            <Head title={t('h1')}/>
             <section className="theme-light section section--projects section--projects-list-page">
                 <div className="projects">
                     <div className="container-fluid">
@@ -108,6 +110,7 @@ export default function Projects({allProjectsData}) {
                             </div>
                         </div>
                     </div>
+                    {/*<h2>{t("Welcome to React")}</h2>*/}
                     <ProjectsList allProjectsData={filteredData}/>
                 </div>
             </section>
@@ -150,7 +153,10 @@ export async function getStaticProps() {
     const allProjectsData = getSortedProjectsData()
     return {
         props: {
-            allProjectsData
+            allProjectsData,
+            namespacesRequired: ['common', 'footer'],
         }
     }
 }
+
+export default withTranslation('common')(Projects);
