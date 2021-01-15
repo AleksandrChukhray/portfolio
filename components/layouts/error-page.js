@@ -1,5 +1,3 @@
-import { string } from 'prop-types';
-import Head from '../head';
 import Header from "../header";
 
 const ErrorLayout = ({ children }) => (

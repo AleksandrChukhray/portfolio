@@ -1,5 +1,5 @@
 ---
-title: 'Web-site siliconvalleycommerce.com'
+title: 'siliconvalleycommerce.com'
 description: 'Simple CMS Wordpress theme'
 keywords: 'key1, key2, key3'
 date: '2020-04-01'

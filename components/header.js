@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { withTranslation } from "../i18n"
 import Socials from "./socials";
 import Copyright from "./copyright";
 import {fadeIn, fadeOut, addClass, removeClass} from "../lib/fade";
@@ -9,8 +10,7 @@ const navigation = React.createRef();
 const navigationClose = React.createRef();
 const navigationSlides = React.createRef();
 
-const Header = () => {
-
+const Header = ({ t }) => {
     function onMenuClickHandler(e){
         e.preventDefault();
         fadeOut(menu.current);
@@ -76,22 +76,22 @@ const Header = () => {
                                 <div className="menu-list" ref={menuList}>
                                     <div className="menu-list_item">
                                         <Link href="/">
-                                            <a className="link">Home</a>
+                                            <a className="link">{t('home')}</a>
                                         </Link>
                                     </div>
                                     <div className="menu-list_item">
                                         <Link href="/about">
-                                            <a className="link">About</a>
+                                            <a className="link">{t('about')}</a>
                                         </Link>
                                     </div>
                                     <div className="menu-list_item">
                                         <Link href="/projects">
-                                            <a className="link">Projects</a>
+                                            <a className="link">{t('projects')}</a>
                                         </Link>
                                     </div>
                                     <div className="menu-list_item">
                                         <Link href="/contacts">
-                                            <a className="link">Contacts</a>
+                                            <a className="link" >{t('contacts')}</a>
                                         </Link>
                                     </div>
                                 </div>
@@ -106,4 +106,4 @@ const Header = () => {
     )
 }
 
-export default Header
+export default withTranslation('header')(Header)

@@ -4,9 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "next",
+    "dev": "node ./server/server.js",
     "build": "next build",
-    "start": "next start"
+    "staging": "NODE_ENV=staging next",
+    "start": "NODE_ENV=production node ./server/server.js"
   },
   "keywords": [],
   "author": "",
@@ -14,7 +15,11 @@
   "dependencies": {
     "@fortawesome/fontawesome-free": "^5.14.0",
     "basiclightbox": "^5.0.3",
+    "body-parser": "^1.19.0",
     "bootstrap": "^4.5.0",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "final-form": "^4.20.1",
     "glider-js": "^1.7.3",
     "gray-matter": "^4.0.2",
     "i18next": "^19.8.4",
@@ -22,13 +27,17 @@
     "i18next-http-backend": "^1.0.21",
     "next": "^9.5.0",
     "next-i18next": "^7.0.1",
+    "nodemailer": "^6.4.17",
     "prop-types": "^15.7.2",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
+    "react-final-form": "^6.5.2",
     "react-i18next": "^11.7.3",
     "react-images": "^1.1.7",
+    "react-toastify": "^6.2.0",
     "remark": "^12.0.1",
     "remark-html": "^12.0.0",
-    "sass": "^1.26.10"
+    "sass": "^1.26.10",
+    "validator": "^13.5.2"
   }
 }

@@ -13,6 +13,14 @@
   margin: 0 auto;
   position: relative;
 
+  &_slider {
+    &:hover {
+      .slider_help {
+        opacity: 1;
+      }
+    }
+  }
+
   &_image {
     top: -240px;
     right: -150px;
@@ -43,7 +51,7 @@
   &_text {
     font-size: 16px;
     line-height: 32px;
-    margin: 50px 0 0;
+    margin: 0;
 
     li {
       list-style: disc inside none;
@@ -81,6 +89,29 @@
 
     @media #{$viewport-480} {
       margin: 0;
+    }
+  }
+
+  &_help {
+    @extend .transition;
+    opacity: 0;
+    text-align: center;
+
+    @media #{$viewport-1200} {
+      display: none;
+    }
+
+    &:hover {
+      .slider_help {
+        opacity: 1;
+      }
+    }
+
+    svg {
+      width: 20px;
+      height: 20px;
+      margin: 10px;
+      color: $black333;
     }
   }
 

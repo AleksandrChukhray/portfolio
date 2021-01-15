@@ -1,7 +1,8 @@
 {
-  "h1": "A simple example",
-  "change-locale": "Change locale",
-  "to-second-page": "To second page",
-  "error-with-status": "A {{statusCode}} error occurred on server",
-  "error-without-status": "An error occurred on the server"
+  "back": "go back",
+  "scroll": "scroll down",
+  "change-locale": "Change language",
+  "telegram": "Telegram",
+  "git-hub": "GitHub",
+  "instagram": "Instagram"
 }

@@ -1,5 +1,5 @@
 ---
-title: 'Web-site elit-taxi.ua'
+title: 'elit-taxi.ua'
 description: 'Официальный сайт службы такси в городе Киев'
 keywords: 'taxi service'
 date: '2018-08-01'

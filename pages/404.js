@@ -1,7 +1,8 @@
 import Link from "next/link";
 import ErrorLayout from "../components/layouts/error-page";
+import { withTranslation } from "../i18n";
 
-const ErrorPage = ({}) => (
+const ErrorPage = ({ t }) => (
     <ErrorLayout>
         <section className="theme-light section section--error">
             <div className="container-fluid">
@@ -10,11 +11,11 @@ const ErrorPage = ({}) => (
                         <div className="error">
                             <div className="error_item">
                                 <div className="error_code">{'404'}</div>
-                                <div className="error_header">{'page not found'}</div>
-                                <div className="error_subheader">{'The page you are looking for doesn\'t exist.'} </div>
+                                <div className="error_header">{t('404')}</div>
+                                <div className="error_subheader">{t('error-text')} </div>
                                 <div className="error_button">
                                     <Link href="/">
-                                        <a className="button button--active">{'Go Back'}</a>
+                                        <a className="button button--active">{t('back')}</a>
                                     </Link>
                                 </div>
                             </div>
@@ -199,4 +200,4 @@ const ErrorPage = ({}) => (
     </ErrorLayout>
 );
 
-export default ErrorPage;
+export default withTranslation('error')(ErrorPage);

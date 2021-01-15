@@ -94,6 +94,17 @@ h6, .h6 {
   }
 }
 
+.change-lang {
+  display: inline-block;
+  border: none;
+  outline: none;
+  background-color: transparent;
+  font-family: $font-family-moolboran;
+  font-size: 24px;
+  text-align: center;
+  padding: 0;
+}
+
 .button {
   display: inline-block;
   text-align: center;
@@ -111,15 +122,16 @@ h6, .h6 {
     color: themed('linkColor');
   }
 
-  &:hover,
-  &--active {
+  &:hover:not([disabled]),
+  &--active:not([disabled]){
     @include themify($themes) {
       color: themed('backgroundColor');
       background-color: themed('linkColor');
     }
   }
 
-  @media #{$viewport-480} {
+
+  @media #{$viewport-768} {
     padding: 10px 20px;
     margin-bottom: 10px !important;
     width: 100%;
@@ -135,6 +147,7 @@ h6, .h6 {
   width: 100%;
   height: auto;
 }
+
 .image-center {
   position: relative;
 
@@ -162,6 +175,92 @@ h6, .h6 {
   margin: auto;
   transform-origin: center;
   transform: rotate(-90deg);
+}
+
+.form {
+  position: relative;
+  .input,
+  .textarea {
+    width: 100%;
+    background-color: $white;
+    line-height: 40px;
+    font-family: $font-family-moolboran;
+    font-size: 16px;
+    margin: 0;
+    padding: 0;
+    outline: none;
+    border: none;
+  }
+
+
+  .textarea {
+    height: 200px;
+    resize: none;
+  }
+
+  &_buttons {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+
+    @media #{$viewport-1200} {
+      justify-content: space-around;
+    }
+
+    .button {
+      min-width: 220px;
+      margin-bottom: 20px;
+      background-color: $white;
+
+      &[disabled]{
+        cursor: not-allowed;
+      }
+
+      @media #{$viewport-480} {
+        min-width: auto;
+      }
+    }
+  }
+
+  &_input {
+    margin: 0 0 20px;
+    padding: 0 10px;
+    border: 1px solid $black;
+    position: relative;
+
+    &:last-child {
+      margin: 0;
+    }
+
+    &--input {
+
+    }
+
+    &--textarea {
+
+    }
+
+    &--button {
+      float: right;
+      border: none;
+      padding: 0;
+    }
+  }
+
+  &_required {
+    font-size: 18px;
+    line-height: 18px;
+    position: absolute;
+    color: $red;
+    left: calc(100% + 5px);
+    top: 0;
+    bottom: 0;
+    display: flex;
+    width: 40px;
+    height: 40px;
+    flex-flow: column nowrap;
+    justify-content: center;
+  }
 }
 
 

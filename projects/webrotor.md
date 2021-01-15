@@ -1,5 +1,5 @@
 ---
-title: 'Web-site webrotor'
+title: 'webrotor'
 description: 'Simple site for web-studio'
 keywords: 'web studio'
 date: '2017-07-01'

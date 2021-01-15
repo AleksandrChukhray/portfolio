@@ -1,5 +1,5 @@
 ---
-title: 'Web-site apteka.life'
+title: 'apteka.life'
 description: 'Simple pharmacy web-site on CMS OpenCart'
 keywords: 'web-site, opencart, pharmacy'
 date: '2016-01-01'

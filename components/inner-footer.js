@@ -1,16 +1,17 @@
 import Link from "next/link"
 import Copyright from "./copyright";
+import { withTranslation } from '../i18n'
 
-const InnerFooter = ({ path }) => {
+const InnerFooter = ({ path, t }) => {
 
-    // TODO: Сделать это более красивым
+    // TODO: Привести в надлежащий вид
     const getLink = path => path === 'projects' ?
         (<Link href="/projects">
-            <a className="link"> go back </a>
+            <a className="link"> {t('back')} </a>
         </Link>) :
 
         (<Link href="/">
-            <a className="link"> go back </a>
+            <a className="link"> {t('back')} </a>
         </Link>)
 
 
@@ -25,4 +26,4 @@ const InnerFooter = ({ path }) => {
 
 
 
-export default InnerFooter;
+export default withTranslation('footer')(InnerFooter);

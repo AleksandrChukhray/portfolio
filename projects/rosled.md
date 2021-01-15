@@ -1,5 +1,5 @@
 ---
-title: 'Web-site rosled.com'
+title: 'rosled.com'
 description: 'LED advertising under the order. High-quality LED screens for advertising at affordable prices. Installation, adjustment, repair, delivery to Shchelkovo.'
 keywords: 'LED, screen, Shchelkovo'
 date: '2017-03-27'

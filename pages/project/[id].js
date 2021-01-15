@@ -1,37 +1,36 @@
-import React from 'react';
-import Link from 'next/link';
-
-import Head from '../../components/head';
-import ImageViewer from '../../components/carousel';
+import React from "react";
+import Head from "../../components/head";
+import ImageViewer from "../../components/carousel";
 import InnerLayout from "../../components/layouts/inner-page";
-import {outerHtml} from "../../lib/fade";
-import {getAllProjectIds, getProjectData} from '../../lib/projets'
+import {getAllProjectIds, getProjectData} from "../../lib/projets";
+import { withTranslation } from "../../i18n";
+import Swipe from "../../components/icon/swipe";
 
-export default function Project({allProjectsData}) {
-    const projectName = allProjectsData.name || 'project';
-
-    function getSlide(images) {
-        return images.split(',').map((el, index) => el.length > 0 && (
-            <div className="slider_item" key={`image-${index}`}>
-                <div className="slider_wrapper">
-                    <img src={el} alt="" className="image"/>
-                    <div className="show-image">
-                        <i className="far fa-2x fa-eye"/>
-                    </div>
+function getSlide(images) {
+    return images.split(',').map((el, index) => el.length > 0 && (
+        <div className="slider_item" key={`image-${index}`}>
+            <div className="slider_wrapper">
+                <img src={el} alt="" className="image"/>
+                <div className="show-image">
+                    <i className="far fa-2x fa-eye"/>
                 </div>
             </div>
-        ))
-    }
+        </div>
+    ))
+}
 
-    function getImages(images) {
-        return images.split(',').map((el, index) => ({
-                caption: '',
-                author: '',
-                createdAt: '',
-                likes: '',
-                source: {regular: el, thumbnail: el}
-            }));
-    }
+function getImages(images) {
+    return images.split(',').map((el) => ({
+        caption: '',
+        author: '',
+        createdAt: '',
+        likes: '',
+        source: {regular: el, thumbnail: el}
+    }));
+}
+
+function Project({allProjectsData, t}) {
+    const projectName = allProjectsData.name || 'project';
 
     return (
         <InnerLayout clasName={'project-page'} path={'projects'}>
@@ -49,17 +48,30 @@ export default function Project({allProjectsData}) {
                                     <div className="project-page_slider">
                                         { allProjectsData.images &&
                                         <ImageViewer images={getImages(allProjectsData.images)}/> }
+                                        <div className="slider_help"><Swipe/></div>
                                     </div>
                                     <div className="project-page_text">
                                         <div dangerouslySetInnerHTML={{__html: allProjectsData.contentHtml}}/>
                                     </div>
                                     <div className="project-page_buttons">
-                                        {allProjectsData.github && <a href={allProjectsData.github} target={'_blank'}
-                                                                      className="button button--download">View on
-                                            Github</a>}
-                                        {allProjectsData.url && <a href={allProjectsData.url} target={'_blank'}
-                                                                   className="button button button--projects">Live
-                                            view</a>}
+                                        {
+                                            allProjectsData.github &&
+                                            (<a
+                                                href={allProjectsData.github}
+                                                target={'_blank'}
+                                                className="button button--download">
+                                                {t('view-github')}
+                                            </a>)
+                                        }
+                                        {
+                                            allProjectsData.url &&
+                                            (<a
+                                                href={allProjectsData.url}
+                                                target={'_blank'}
+                                                className="button button button--projects">
+                                                {t('live-view')}
+                                            </a>)
+                                        }
                                     </div>
                                 </div>
                             </div>
@@ -70,7 +82,7 @@ export default function Project({allProjectsData}) {
             </section>
         </InnerLayout>
     )
-};
+}
 
 export async function getStaticPaths() {
     const paths = getAllProjectIds()
@@ -88,3 +100,5 @@ export async function getStaticProps({params}) {
         }
     }
 }
+
+export default withTranslation('project')(Project)

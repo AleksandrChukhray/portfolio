@@ -1,5 +1,5 @@
 ---
-title: 'Web-site balter.de'
+title: 'balter.de'
 description: 'Professional video surveillance products, video intercoms and alarm systems.'
 keywords: 'web-site, prestashop, security, alarm systems'
 date: '2016-05-01'

@@ -4,7 +4,20 @@ const { localeSubpaths } = require('next/config').default() ? require('next/conf
 const path = require('path')
 
 module.exports = new NextI18Next({
-    otherLanguages: ['de', 'ru'],
+    defaultLanguage: 'ru',
+    otherLanguages: ['en'],
     localeSubpaths,
-    localePath: path.resolve('./static/locales')
+    localePath: path.resolve('./static/locales'),
+    interpolation: {
+        format: function(value, format) {
+            if (format === 'age') {
+                const birthdayYear = new Date('1992-03-10').getFullYear();
+                const now = new Date().getFullYear();
+
+                return now - birthdayYear;
+            }
+
+            return value;
+        }
+    }
 })

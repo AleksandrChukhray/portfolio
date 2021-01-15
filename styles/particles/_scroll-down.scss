@@ -5,6 +5,7 @@
   height: 50px;
   bottom: 95px;
   right: -95px;
+  text-align: right;
 
   &_text {
     display: inline-block;
@@ -23,9 +24,10 @@
     background-color: $black;
   }
 
-  @media #{$viewport-992} {
-    right: 0;
-    left: 0;
-    margin: 0 auto;
+  @media #{$viewport-768} {
+    //right: 0;
+    //left: 0;
+    //margin: 0 auto;
+    display: none;
   }
 }

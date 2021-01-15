@@ -1,5 +1,5 @@
 ---
-title: 'Ecommerce web-site vipshina.ua'
+title: 'vipshina.ua'
 description: 'Sale of car tires and wheels of different sizes for different car models.'
 keywords: 'tires,wheels,ecommerce,prestashop'
 date: '2016-05-01'

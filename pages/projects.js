@@ -1,17 +1,19 @@
-import {useState, createRef} from 'react';
-import Link from 'next/link';
-import Head from '../components/head';
+import {useState, createRef} from "react";
+import Link from "next/link";
+import Head from "../components/head";
 import InnerLayout from "../components/layouts/inner-page";
 import {getScrollPosition, useScrollPosition} from "../components/effects/scroll";
 import {getSortedProjectsData, getBGColor, radialGradient} from "../lib/projets";
 import {addClass, removeClass} from "../lib/fade";
 import ScrollToTop from "../components/navigation/scroll-to-top";
-import { i18n, withTranslation } from '../i18n'
+import { withTranslation } from "../i18n";
+import ProjectsImage from "../components/projects-image";
 
 const projectList = createRef();
 
-function Projects({allProjectsData, t }) {
+function Projects({allProjectsData, t, random }) {
     const data = allProjectsData.filter(el => el.published === 'true');
+    const imageData = data.map(value => value.title);
 
     let [filteredData, changeFilteredData] = useState(data);
     let [selectedTech, changeSelectedTech] = useState(null);
@@ -59,43 +61,19 @@ function Projects({allProjectsData, t }) {
         }, 100);
     }
 
-    // const filters2 = [
-    //     'react',
-    //     'angular',
-    //     'html',
-    //     'sass',
-    //     'js',
-    //     'jquery',
-    //     'rxjs',
-    //     'ngrx',
-    //     'nodejs',
-    //     'express',
-    //     'mongodb',
-    //     'graphql',
-    //     'es6',
-    //     'es5',
-    //     'typescript',
-    //     'redux',
-    //     'php',
-    //     'mysql',
-    //     'opencart',
-    //     'wordpress',
-    //     'prestashop',
-    //     'telegram API'
-    // ]
-
     return (
         <InnerLayout clasName={'main-page'}>
-            <Head title={t('h1')}/>
+            <Head title={t('title')}/>
             <section className="theme-light section section--projects section--projects-list-page">
                 <div className="projects">
                     <div className="container-fluid">
                         <div className="row">
                             <div className="offset-md-2 col-md-8 col-sm-12">
-                                <img
-                                    src="https://via.placeholder.com/1200x300?text=Projects+List"
-                                    alt=""
-                                    className="projects_image image"/>
+                                <ProjectsImage random={random} projects={imageData} />
+                                {/*<img*/}
+                                {/*    src="https://via.placeholder.com/1200x300?text=Projects+List"*/}
+                                {/*    alt=""*/}
+                                {/*    className="projects_image image"/>*/}
                                 <div className="projects_filter">
                                     <div className="filter">
                                         {getAllFilters(data).map((el, index) =>
@@ -110,16 +88,15 @@ function Projects({allProjectsData, t }) {
                             </div>
                         </div>
                     </div>
-                    {/*<h2>{t("Welcome to React")}</h2>*/}
-                    <ProjectsList allProjectsData={filteredData}/>
+                    <ProjectsList allProjectsData={filteredData} t={t}/>
                 </div>
             </section>
             <ScrollToTop scrollY={showOnScroll}/>
         </InnerLayout>
     )
-};
+}
 
-function ProjectsList({allProjectsData}) {
+function ProjectsList({allProjectsData, t}) {
     return (
         <div className="projects_list" ref={projectList}>
             {allProjectsData.map((el, index) => (
@@ -129,7 +106,7 @@ function ProjectsList({allProjectsData}) {
                             style={{backgroundImage: radialGradient(getBGColor(el.name)) }}
                         />
                         <div className="line"/>
-                        <div className="project_numbers">{`0${index + 1}`}</div>
+                        <div className="project_numbers">{index < 9 && '0'}{`${index + 1}`}</div>
                         <div className="project_wrap">
                             <div className="project_name"> {el.name} </div>
                             <div className="project_stack"> {el.smallStack} </div>
@@ -137,7 +114,7 @@ function ProjectsList({allProjectsData}) {
                         <Link href="/project/[id]" as={`/project/${el.id}`}>
                             <a className="project_button">
                             <span>
-                                <span>view project <i className="project_button_arrow" /></span>
+                                <span>{t('view')} <i className="project_button_arrow" /></span>
                             </span>
                             </a>
                         </Link>
@@ -150,13 +127,17 @@ function ProjectsList({allProjectsData}) {
 }
 
 export async function getStaticProps() {
-    const allProjectsData = getSortedProjectsData()
+    const allProjectsData = getSortedProjectsData();
+    const data = allProjectsData.filter(el => el.published === 'true');
+
+    let randomProject = Math.floor(Math.random() * (data.length - 1));
+
     return {
         props: {
-            allProjectsData,
-            namespacesRequired: ['common', 'footer'],
+            allProjectsData: data,
+            random: randomProject
         }
     }
 }
 
-export default withTranslation('common')(Projects);
+export default withTranslation('projects')(Projects);

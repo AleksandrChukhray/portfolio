@@ -1,5 +1,5 @@
 ---
-title: 'Web-site noop.nl'
+title: 'noop.nl'
 description: 'Simple Wordpress theme for blog'
 keywords: 'cms wordpress,web-site,noop.nl'
 date: '2016-04-01'

@@ -1,0 +1,40 @@
+@import "vars";
+
+.Toastify{
+  &__toast {
+    box-shadow: none;
+    border-radius: 0;
+    border: 1px solid $black;
+    transition: all .5s ease;
+
+    &--default {
+      background: $white;
+      &:hover {
+        background: $black;
+        .Toastify__toast-body {
+          color: $white;
+        }
+
+        .Toastify__progress-bar {
+          background: $white !important;
+        }
+      }
+    }
+  }
+
+  &__close-button {
+    display: none;
+  }
+
+  &__toast-body {
+    transition: all .5s ease;
+    font-family: $font-family-moolboran;
+    color: $black;
+  }
+
+  &__progress-bar {
+    transition: all .5s ease;
+    background: $black !important;
+    height: 2px !important;
+  }
+}

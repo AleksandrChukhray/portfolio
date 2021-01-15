@@ -39,9 +39,10 @@ $grid-columns: 12;
     lighterColor
  */
 
-$black:     #1a1a1a;
+$black: #1a1a1a;
 $white:     #f7f7f7;
-$black333:  #333;
+$red:       #f00;
+$black333: #333333;
 
 
 // Sizes
@@ -52,7 +53,8 @@ $base-border-radius:  6px;
 // Fonts
 // -------------------------------
 //$font-family-moolboran:   'MoolBoran', sans-serif;
-$font-family-moolboran:   'Overlock', cursive;
+//$font-family-moolboran:   'Overlock', cursive;
+$font-family-moolboran:    'Cormorant SC', serif;
 $font-family-glacial:     'Uni Neue', sans-serif;
 $font-family-uni-neue:     'GlacialIndifference', sans-serif;
 // -------------------------------

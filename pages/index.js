@@ -1,5 +1,6 @@
 import {useState} from 'react';
 import Link from 'next/link';
+import { withTranslation } from '../i18n'
 import Head from '../components/head';
 import MainLayout from "../components/layouts/main";
 import Socials from "../components/socials";
@@ -8,7 +9,7 @@ import ScrollToTop from "../components/navigation/scroll-to-top";
 import {getSortedProjectsData, getBGColor, radialGradient} from "../lib/projets";
 import {useScrollPosition} from "../components/effects/scroll";
 
-export default function Home({allProjectsData}) {
+function Home({allProjectsData, t}) {
     const [hideOnScroll, setHideOnScroll] = useState(0)
 
     useScrollPosition(
@@ -23,16 +24,16 @@ export default function Home({allProjectsData}) {
 
     return (
         <MainLayout clasName={'main-page'}>
-            <Head title="Home"/>
-            <MainSection scrollTop={hideOnScroll}/>
-            <SloganSection/>
-            <ProjectsList allProjectsData={allProjectsData}/>
-            <ContactMe/>
+            <Head title={t('title')}/>
+            <MainSection scrollTop={hideOnScroll} t={t}/>
+            <SloganSection t={t}/>
+            <ProjectsListWithTrans allProjectsData={allProjectsData}/>
+            <ContactMe t={t}/>
         </MainLayout>
     )
-};
+}
 
-function MainSection({scrollTop}) {
+function MainSection({scrollTop, t}) {
     return (
         <section className="theme-light section section--main section--full-height">
             <div className="container-fluid">
@@ -43,7 +44,7 @@ function MainSection({scrollTop}) {
                     <div className="col-10 align-self-center">
                         <div className="main-text">
                             <div className="main-text_wrap">
-                                <div className="main-text_header">Aleksandr Chukhrai</div>
+                                <div className="main-text_header">{t('author')}</div>
                                 <div className="main-text_body">Frontend Developer</div>
                             </div>
                             <div className="main-text_img_wrap">
@@ -61,24 +62,16 @@ function MainSection({scrollTop}) {
     )
 }
 
-function SloganSection() {
+function SloganSection({t}) {
     return (
         <section className="theme-light section section--slogan section--full-height">
             <div className="container-fluid">
                 <div className="row">
                     <div className="col align-self-center">
                         <div className="slogan">
-                            <div className="slogan_header fill">
-                                Crafted with
-                            </div>
+                            <div className="slogan_header fill"> {t('slogan')}</div>
                             <br/>
-                            <div className="slogan_header fill">
-                                love <span/>
-                            </div>
-                            <br/>
-                            <div className="slogan_body fill">
-                                There are a selection of my resent works.
-                            </div>
+                            <div className="slogan_body fill">{t('sub-slogan')}</div>
                             <br/>
                         </div>
                     </div>
@@ -88,8 +81,7 @@ function SloganSection() {
     )
 }
 
-function ProjectsList({allProjectsData}) {
-
+function ProjectsList({allProjectsData, t}) {
     return (
         <section className="theme-light section section--projects">
             <div className="projects">
@@ -97,7 +89,7 @@ function ProjectsList({allProjectsData}) {
                         <div className="project" key={el.name}>
                             <div className="project_image" style={{backgroundImage: radialGradient(getBGColor(el.name))}}/>
                             <div className="line"/>
-                            <div className="project_numbers">{`0${index + 1}`}</div>
+                            <div className="project_numbers">{index < 9 && '0'}{`${index + 1}`}</div>
                             <div className="project_wrap">
                                 <div className="project_name"> {el.name} </div>
                                 <div className="project_stack"> {el.smallStack} </div>
@@ -105,7 +97,7 @@ function ProjectsList({allProjectsData}) {
                             <Link href="/project/[id]" as={`/project/${el.id}`}>
                                 <a className="project_button">
                                         <span>
-                                            <span>view project <i className="project_button_arrow"/></span>
+                                            <span>{t('view')} <i className="project_button_arrow"/></span>
                                         </span>
                                 </a>
                             </Link>
@@ -118,17 +110,19 @@ function ProjectsList({allProjectsData}) {
     )
 }
 
-function ContactMe() {
+const ProjectsListWithTrans = withTranslation('projects')(ProjectsList);
+
+function ContactMe({t}) {
     return (
         <section className="theme-dark section section--contact">
             <div className="container-fluid">
                 <div className="row">
                     <div className="col-12">
                         <div className="contact-us">
-                            <div className="contact-us_header">Let's talk!</div>
-                            <div className="contact-us_sub-header">I am available for freelance work.</div>
+                            <div className="contact-us_header">{t('talk')}</div>
+                            <div className="contact-us_sub-header">{t('sub-talk')}</div>
                             <Link href="/contacts">
-                                <a className="contact-us_button button">Contact me</a>
+                                <a className="contact-us_button button">{t('contact-me')}</a>
                             </Link>
                         </div>
                     </div>
@@ -142,7 +136,9 @@ export async function getStaticProps() {
     const allProjectsData = getSortedProjectsData()
     return {
         props: {
-            allProjectsData
+            allProjectsData,
         }
     }
 }
+
+export default withTranslation('main')(Home)

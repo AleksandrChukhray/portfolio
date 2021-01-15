@@ -1,9 +1,9 @@
 ---
-title: 'Web-site farmasfera.com.ua'
+title: 'farmasfera.com.ua'
 description: 'Simple pharmacy web-site on CMS OpenCart'
 keywords: 'web-site,opencart,pharmacy'
 date: '2016-01-01'
-name: 'farmasfera'
+name: 'farmasfera.com.ua'
 smallStack: 'html,css,js/jquery'
 stack: 'php,mysql,cms opencart,html,css,js/jquery,adaptive,responsive,github,git'
 github: ''

@@ -20,3 +20,4 @@ yarn-error.log*
 /nextjs-blog/
 /.idea/
 /todo.txt
+/lib/config.js

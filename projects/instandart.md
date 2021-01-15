@@ -1,5 +1,5 @@
 ---
-title: 'Web-site instandart.com'
+title: 'instandart.com'
 description: 'Web-site for software company'
 keywords: 'web-site,portfolio,instandart,adaptive,responsive,github,git,yarn'
 date: '2020-04-01'

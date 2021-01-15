@@ -2,10 +2,8 @@ import React from 'react';
 import {colors, largeDevice, smallDevice} from '../../lib/theme';
 
 export const Header = ({currentView, modalProps}) => {
-    const {author, caption, createdAt, likes} = currentView;
+    const {createdAt} = currentView;
     const {onClose} = modalProps;
-
-    const createdDate = new Date(createdAt).toLocaleDateString();
 
     return (
         <div
@@ -27,64 +25,11 @@ export const Header = ({currentView, modalProps}) => {
                     paddingLeft: 20,
                     paddingRight: 20,
                 },
-            }}
-        >
-            {/*<div style={{alignItems: 'center', display: 'flex ', minWidth: 0}}>*/}
-            {/*    <img*/}
-            {/*        style={{*/}
-            {/*            borderRadius: 3,*/}
-            {/*            flexShrink: 0,*/}
-            {/*            height: 32,*/}
-            {/*            marginRight: 8,*/}
-            {/*            width: 32,*/}
-            {/*        }}*/}
-            {/*        src={author.avatar}*/}
-            {/*    />*/}
-            {/*    <div style={{fontSize: '0.85em', minWidth: 0}}>*/}
-            {/*        <div style={{color: colors.N100, fontWeight: 500}}>{author.name}</div>*/}
-            {/*        <div*/}
-            {/*            style={{*/}
-            {/*                color: colors.N60,*/}
-            {/*                marginTop: '0.25em',*/}
-            {/*                minWidth: 0,*/}
-            {/*                overflow: 'hidden',*/}
-            {/*                textOverflow: 'ellipsis',*/}
-            {/*                whiteSpace: 'nowrap',*/}
-            {/*            }}*/}
-            {/*        >*/}
-            {/*            <span>{createdDate}</span>*/}
-            {/*            {caption ? <span> &mdash; {caption}</span> : null}*/}
-            {/*        </div>*/}
-            {/*    </div>*/}
-            {/*</div>*/}
+            }}>
             <div style={{alignItems: 'center', display: 'flex '}}>
-                {/*<Button onClick={() => { console.log('Like clicked!'); }}>*/}
-                {/*      <span*/}
-                {/*          style={{*/}
-                {/*              backgroundColor: 'white',*/}
-                {/*              borderRadius: 8,*/}
-                {/*              display: 'inline-block',*/}
-                {/*              fontSize: '0.7em',*/}
-                {/*              fontWeight: 500,*/}
-                {/*              lineHeight: 1,*/}
-                {/*              marginRight: -12,*/}
-                {/*              marginTop: 8,*/}
-                {/*              padding: '1px 4px',*/}
-                {/*              position: 'relative',*/}
-                {/*          }}*/}
-                {/*      >*/}
-                {/*        {likes}*/}
-                {/*      </span>*/}
-                {/*      <Heart/>*/}
-                {/*</Button>*/}
                 <Button
                     onClick={onClose}
-                    style={{
-                        // borderLeft: `1px solid ${colors.N10}`,
-                        // paddingLeft: 10,
-                        paddingRight: 20,
-                        // [largeDevice]: {marginRight: -10},
-                    }}
+                    style={{ paddingRight: 20 }}
                 >
                     <Close/>
                 </Button>

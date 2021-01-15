@@ -1,9 +1,9 @@
 ---
-title: 'Web-site gps-life.com'
+title: 'gps-life.com'
 description: 'GPS/GSM системы охраны для бизнеса и жизни. GPS трекеры, GPS маячки, контроль топлива и пробега, GSM сигнализации для авто и дома'
 keywords: 'GPS/GSM, GPS трекеры, GPS маячки'
 date: '2015-10-15'
-name: 'Web-site gps-life.com'
+name: 'gps-life.com'
 smallStack: 'html,css,js/jquery'
 stack: 'php,mysql,html,css,js/jquery,cms opencart,responsive,adaptive'
 github: ''
