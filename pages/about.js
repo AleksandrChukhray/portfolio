@@ -20,7 +20,10 @@ function About({ t }) {
                                     <div className="about_header">{ t('text') }</div>
                                     <div className="about_text">{ t('sub-text', { text: ''}) }</div>
                                     <div className="about_buttons">
-                                        <div className="button button--active button--download">{ t('download') }</div>
+                                        <a
+                                            href="/static/cv/Chukhrai_Aleksandr.pdf"
+                                            download="Chukhrai_Aleksandr.pdf"
+                                            className="button button--active button--download">{ t('download') }</a>
                                         <Link href="/projects">
                                             <a href="/projects" className="button button button--projects">{ t('view') }</a>
                                         </Link>
