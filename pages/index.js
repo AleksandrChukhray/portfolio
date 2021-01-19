@@ -1,5 +1,6 @@
-import {useState} from 'react';
+import {useState, createRef} from 'react';
 import Link from 'next/link';
+import classNames from 'classnames';
 import { withTranslation } from '../i18n'
 import Head from '../components/head';
 import MainLayout from "../components/layouts/main";
@@ -7,7 +8,9 @@ import Socials from "../components/socials";
 import ScrollDown from "../components/navigation/scroll-down";
 import ScrollToTop from "../components/navigation/scroll-to-top";
 import {getSortedProjectsData, getBGColor, radialGradient} from "../lib/projets";
-import {useScrollPosition} from "../components/effects/scroll";
+import {useScrollPosition, getScrollPosition} from "../components/effects/scroll";
+
+const slogan = createRef();
 
 function Home({allProjectsData, t}) {
     const [hideOnScroll, setHideOnScroll] = useState(0)
@@ -19,7 +22,7 @@ function Home({allProjectsData, t}) {
         [hideOnScroll],
         null,
         null,
-        200
+        500
     )
 
     return (
@@ -63,15 +66,19 @@ function MainSection({scrollTop, t}) {
 }
 
 function SloganSection({t}) {
+    let sPos = slogan.current && slogan.current.getBoundingClientRect() || {top: Infinity};
+    let win = sPos.top === Infinity ? undefined : window;
+    let L = win ? (sPos.top - win.innerHeight): 0;
+
     return (
         <section className="theme-light section section--slogan section--full-height">
             <div className="container-fluid">
                 <div className="row">
                     <div className="col align-self-center">
-                        <div className="slogan">
-                            <div className="slogan_header fill"> {t('slogan')}</div>
+                        <div className="slogan" ref={slogan}>
+                            <div className={classNames("slogan_header", { fill: L < 0 })}> {t('slogan')}</div>
                             <br/>
-                            <div className="slogan_body fill">{t('sub-slogan')}</div>
+                            <div className={classNames("slogan_body", { fill: L < 0 })}>{t('sub-slogan')}</div>
                             <br/>
                         </div>
                     </div>
