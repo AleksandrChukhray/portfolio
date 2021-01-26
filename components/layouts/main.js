@@ -1,18 +1,18 @@
-import Header from "../header";
-import Footer from "../footer";
-import Notification from "../notification";
+import Header from '../header'
+import Footer from '../footer'
+import Notification from '../notification'
 
-const MainLayout = ({ children, className }) => (
-    <div className={className}>
+function MainLayout({ children, className }) {
+  return (<div className={className}>
         <Header />
         <div className="content-wrapper">{children}</div>
         <Footer />
         <Notification />
-    </div>
-)
+    </div>)
+}
 
 MainLayout.propTypes = {
 
 }
 
-export default MainLayout;
+export default MainLayout

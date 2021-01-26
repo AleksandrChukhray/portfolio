@@ -1,104 +1,127 @@
-import React from "react";
-import Head from "../../components/head";
-import ImageViewer from "../../components/carousel";
-import InnerLayout from "../../components/layouts/inner-page";
-import {getAllProjectIds, getProjectData} from "../../lib/projets";
-import { withTranslation } from "../../i18n";
-import Swipe from "../../components/icon/swipe";
+import React from 'react'
+import Head from '../../components/head'
+import ImageViewer from '../../components/carousel'
+import InnerLayout from '../../components/layouts/inner-page'
+import { getAllProjectIds, getProjectData } from '../../lib/projets'
+import { withTranslation } from '../../i18n'
+import Swipe from '../../components/icon/swipe'
 
 function getSlide(images) {
-    return images.split(',').map((el, index) => el.length > 0 && (
-        <div className="slider_item" key={`image-${index}`}>
-            <div className="slider_wrapper">
-                <img src={el} alt="" className="image"/>
-                <div className="show-image">
-                    <i className="far fa-2x fa-eye"/>
-                </div>
-            </div>
-        </div>
-    ))
+  return images.split(',').map((el, index) => el.length > 0 &&
+  <div
+    className="slider_item"
+    key={`image-${index}`}
+  >
+    <div className="slider_wrapper">
+      <img
+        alt=""
+        className="image"
+        src={el}
+      />
+
+      <div className="show-image">
+        <i className="far fa-2x fa-eye" />
+      </div>
+    </div>
+  </div>)
 }
 
 function getImages(images) {
-    return images.split(',').map((el) => ({
-        caption: '',
-        author: '',
-        createdAt: '',
-        likes: '',
-        source: {regular: el, thumbnail: el}
-    }));
+  return images.split(',').map((el) => ({
+    caption: '',
+    author: '',
+    createdAt: '',
+    likes: '',
+    source: { regular: el,
+      thumbnail: el }
+  }))
 }
 
-function Project({allProjectsData, t}) {
-    const projectName = allProjectsData.name || 'project';
+function Project({ allProjectsData, t }) {
+  const projectName = allProjectsData.name || 'project'
 
-    return (
-        <InnerLayout clasName={'project-page'} path={'projects'}>
-            <Head title={projectName}/>
-            <section className="theme-light section section--project-page">
-                <div className="container-fluid">
-                    <div className="row">
-                        <div className="col align-self-center">
-                            <div className="transform-text-left page-text">{projectName}</div>
-                        </div>
-                        <div className="col-10 align-self-center">
-                            <div className="project-page">
-                                <div className="project-page_wrapper">
-                                    <div className="project-page_header">{allProjectsData.title}</div>
-                                    <div className="project-page_slider">
-                                        { allProjectsData.images &&
-                                        <ImageViewer images={getImages(allProjectsData.images)}/> }
-                                        <div className="slider_help"><Swipe/></div>
-                                    </div>
-                                    <div className="project-page_text">
-                                        <div dangerouslySetInnerHTML={{__html: allProjectsData.contentHtml}}/>
-                                    </div>
-                                    <div className="project-page_buttons">
-                                        {
-                                            allProjectsData.github &&
-                                            (<a
-                                                href={allProjectsData.github}
-                                                target={'_blank'}
-                                                className="button button--download">
-                                                {t('view-github')}
-                                            </a>)
-                                        }
-                                        {
-                                            allProjectsData.url &&
-                                            (<a
-                                                href={allProjectsData.url}
-                                                target={'_blank'}
-                                                className="button button button--projects">
-                                                {t('live-view')}
-                                            </a>)
-                                        }
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div className="col"/>
+  return (
+    <InnerLayout
+      clasName="project-page"
+      path="projects"
+    >
+      <Head title={projectName} />
+
+      <section className="theme-light section section--project-page">
+        <div className="container-fluid">
+          <div className="row">
+            <div className="col align-self-center">
+              <div className="transform-text-left page-text">{projectName}</div>
+            </div>
+
+            <div className="col-10 align-self-center">
+              <div className="project-page">
+                <div className="project-page_wrapper">
+                  <div className="project-page_header">{allProjectsData.title}</div>
+
+                  <div className="project-page_slider">
+                      { allProjectsData.images &&
+                    <ImageViewer images={getImages(allProjectsData.images)} /> }
+
+                      <div className="slider_help"><Swipe /></div>
+                    </div>
+
+                  <div className="project-page_text">
+                      <div dangerouslySetInnerHTML={{ __html: allProjectsData.contentHtml }} />
+                    </div>
+
+                  <div className="project-page_buttons">
+                      {
+                      allProjectsData.github &&
+                      <a
+                        className="button button--download"
+                        href={allProjectsData.github}
+                        target="_blank"
+                      >
+                        {t('view-github')}
+                      </a>
+                    }
+
+                      {
+                      allProjectsData.url &&
+                      <a
+                        className="button button button--projects"
+                        href={allProjectsData.url}
+                        target="_blank"
+                      >
+                        {t('live-view')}
+                      </a>
+                    }
                     </div>
                 </div>
-            </section>
-        </InnerLayout>
-    )
+              </div>
+            </div>
+
+            <div className="col" />
+          </div>
+        </div>
+      </section>
+    </InnerLayout>
+  )
 }
 
 export async function getStaticPaths() {
-    const paths = getAllProjectIds()
-    return {
-        paths,
-        fallback: false
-    }
+  const paths = getAllProjectIds()
+
+  return {
+    paths,
+    fallback: false
+  }
 }
 
-export async function getStaticProps({params}) {
-    const allProjectsData = await getProjectData(params.id)
-    return {
-        props: {
-            allProjectsData
-        }
+export async function getStaticProps({ params }) {
+  const allProjectsData = await getProjectData(params.id)
+
+  return {
+    props: {
+      allProjectsData
     }
+  }
 }
 
 export default withTranslation('project')(Project)

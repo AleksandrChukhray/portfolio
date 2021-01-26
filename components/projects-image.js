@@ -1,18 +1,21 @@
-import React from "react";
-import drawResult from "../lib/three-circle";
+import React from 'react'
+import drawResult from '../lib/three-circle'
 // TODO: переделать используя canvas
 
-export const ProjectsImage = ({ projects, random }) => {
-    let projectName = projects[random]
-    const result = drawResult(projectName);
+export function ProjectsImage({ projects, random }) {
+  const projectName = projects[random]
+  const result = drawResult(projectName)
 
-    // console.log(result, projectName)
+  // Console.log(result, projectName)
 
-    let pointCorner = {width: result.radius, height: result.radius};
-    let pointMiddle = {width: result.length, height: result.length};
-    let pointCenter = {width: result.count, height: result.count};
+  const pointCorner = { width: result.radius,
+    height: result.radius }
+  const pointMiddle = { width: result.length,
+    height: result.length }
+  const pointCenter = { width: result.count,
+    height: result.count }
 
-    return (<div className="projects-image">
+  return <div className="projects-image">
         <div className="projects_wrap">
             <div className="projects-image_row">
                 <div className="projects-image_item">
@@ -151,7 +154,7 @@ export const ProjectsImage = ({ projects, random }) => {
                 </div>
             </div>
         </div>
-    </div>)
+    </div>
 }
 
-export default ProjectsImage;
+export default ProjectsImage

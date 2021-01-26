@@ -1,7 +1,7 @@
-import Copyright from "./copyright";
+import Copyright from './copyright'
 
-const Footer = () => (
-    <footer className="footer">
+function Footer() {
+  return (<footer className="footer">
         <div className="container-fluid">
             <div className="row">
                 <div className="col">
@@ -9,7 +9,7 @@ const Footer = () => (
                 </div>
             </div>
         </div>
-    </footer>
-)
+    </footer>)
+}
 
-export default Footer;
+export default Footer

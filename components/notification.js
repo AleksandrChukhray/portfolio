@@ -1,19 +1,19 @@
-import React from "react";
-import { ToastContainer } from "react-toastify";
+import React from 'react'
+import { ToastContainer } from 'react-toastify'
 
-const Notification = () => {
-    return (
-        <ToastContainer
-            position="top-right"
-            autoClose={5000}
-            hideProgressBar={false}
-            newestOnTop={false}
-            closeOnClick
-            rtl={false}
-            pauseOnFocusLoss
-            draggable
-            pauseOnHover
-        />);
+function Notification() {
+  return (
+    <ToastContainer
+      autoClose={5000}
+      closeOnClick
+      draggable
+      hideProgressBar={false}
+      newestOnTop={false}
+      pauseOnFocusLoss
+      pauseOnHover
+      position="top-right"
+      rtl={false}
+    />)
 }
 
-export default Notification;
+export default Notification

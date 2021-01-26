@@ -1,6 +1,7 @@
-import React from "react";
+import React from 'react'
 
-export const Swipe = () => (<div>
+export function Swipe() {
+  return (<>
     <svg x="0px" y="0px" viewBox="0 0 490.651 490.651">
             <g>
                 <g>
@@ -46,6 +47,7 @@ export const Swipe = () => (<div>
                 </g>
             </g>
         </svg>
-</div>)
+</>)
+}
 
-export default Swipe;
+export default Swipe

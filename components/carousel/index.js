@@ -6,6 +6,7 @@ import 'glider-js/glider.min';
 
 const gutter = 2;
 const slider = React.createRef();
+
 const navButtonStyles = base => ({
     ...base,
     backgroundColor: 'white',
@@ -107,7 +108,7 @@ export default class ImageViewer extends Component {
                         >
                             <Carousel
                                 currentIndex={currentModal}
-                                components={{ Footer: null, Header }}
+                                components={{Footer: null,Header}}
                                 views={images}
                                 styles={{
                                     container: base => ({

@@ -4,12 +4,13 @@ const localeSubpaths = {}
 module.exports = {
   rewrites: async () => nextI18NextRewrites(localeSubpaths),
   publicRuntimeConfig: {
-    localeSubpaths,
+    localeSubpaths
   },
   webpack: (config) => {
     config.node = {
       fs: 'empty'
     }
+
     return config
   }
-};
+}

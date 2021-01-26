@@ -1,28 +1,31 @@
-import { createRef } from 'react';
-const $white = '#f7f7f7';
-const $black = '#1a1a1a';
+import { createRef } from 'react'
+const $white = '#f7f7f7'
+const $black = '#1a1a1a'
 
-const svg = createRef();
+const svg = createRef()
 
 function ScrollToTop({ scrollY }) {
 
-    // console.log(Object.keys(svg.current));
+  // Console.log(Object.keys(svg.current));
 
-    let style = {
-        stroke: $black,
-        fill: $white,
-        strokeWidth: 4,
-        strokeLinecap: 'butt',
-        strokeLinejoin: 'miter',
-        strokeMiterlimit: 4,
-        strokeDashoffset: 1000 - scrollY > 0 ? 1000 - scrollY : 0
-    }
+  const style = {
+    stroke: $black,
+    fill: $white,
+    strokeWidth: 4,
+    strokeLinecap: 'butt',
+    strokeLinejoin: 'miter',
+    strokeMiterlimit: 4,
+    strokeDashoffset: 1000 - scrollY > 0
+      ? 1000 - scrollY
+      : 0
+  }
 
-    function scrollTo() {
-        window.scrollTo({top: 0, behavior: "smooth"})
-    }
+  function scrollTo() {
+    window.scrollTo({ top: 0,
+      behavior: 'smooth' })
+  }
 
-    return (<div onClick={scrollTo} className={'scroll-to-top'}>
+  return (<div onClick={scrollTo} className={'scroll-to-top'}>
         <svg
             xmlns="http://www.w3.org/2000/svg"
             version="1.1"
@@ -38,4 +41,4 @@ function ScrollToTop({ scrollY }) {
     </div>)
 }
 
-export default ScrollToTop;
+export default ScrollToTop

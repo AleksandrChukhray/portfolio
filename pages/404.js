@@ -1,9 +1,9 @@
-import Link from "next/link";
-import ErrorLayout from "../components/layouts/error-page";
-import { withTranslation } from "../i18n";
+import Link from 'next/link'
+import ErrorLayout from '../components/layouts/error-page'
+import { withTranslation } from '../i18n'
 
-const ErrorPage = ({ t }) => (
-    <ErrorLayout>
+function ErrorPage({ t }) {
+  return (<ErrorLayout>
         <section className="theme-light section section--error">
             <div className="container-fluid">
                 <div className="row">
@@ -197,7 +197,7 @@ const ErrorPage = ({ t }) => (
                 </div>
             </div>
         </section>
-    </ErrorLayout>
-);
+    </ErrorLayout>)
+}
 
-export default withTranslation('error')(ErrorPage);
+export default withTranslation('error')(ErrorPage)

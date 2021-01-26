@@ -1,8 +1,8 @@
-import {i18n, withTranslation} from "../i18n";
-import config from "../lib/config";
+import { i18n, withTranslation } from '../i18n'
+import config from '../lib/config'
 
-const Socials = ({ t }) => (
-    <div className="socials">
+function Socials({ t }) {
+  return (<div className="socials">
         <div className="socials_item socials_item--instagram">
             <a
                 href={`https://instagram.com/${config.instagram}`}
@@ -42,7 +42,7 @@ const Socials = ({ t }) => (
                 {i18n.language}
             </button>
         </div>
-    </div>
-)
+    </div>)
+}
 
-export default withTranslation('common')(Socials);
+export default withTranslation('common')(Socials)

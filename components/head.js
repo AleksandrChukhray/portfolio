@@ -1,15 +1,15 @@
-import React from "react";
-import { string } from "prop-types";
-import NextHead from "next/head";
+import React from 'react'
+import { string } from 'prop-types'
+import NextHead from 'next/head'
 
-const defaultDescription = '';
-const defaultKeywords = '';
-const defaultOGURL = '';
-const defaultOGImage = '';
-const defaultTitle = '';
+const defaultDescription = ''
+const defaultKeywords = ''
+const defaultOGURL = ''
+const defaultOGImage = ''
+const defaultTitle = ''
 
-const Head = ({ description, keywords, url, title, ogImage }) => (
-  <NextHead>
+function Head({ description, keywords, url, title, ogImage }) {
+  return <NextHead>
     <meta charSet="UTF-8" />
     <title>{title || defaultTitle}</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -30,7 +30,7 @@ const Head = ({ description, keywords, url, title, ogImage }) => (
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
   </NextHead>
-);
+}
 
 Head.propTypes = {
   title: string,
@@ -38,6 +38,6 @@ Head.propTypes = {
   keywords: string,
   url: string,
   ogImage: string
-};
+}
 
-export default Head;
+export default Head
