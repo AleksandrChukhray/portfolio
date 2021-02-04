@@ -1,6 +1,6 @@
 import { string } from 'prop-types'
-import Header from '../header'
-import InnerFooter from '../inner-footer'
+import Header from '../header/header'
+import InnerFooter from '../footer/inner-footer'
 import Notification from '../notification'
 
 function InnerLayout({ children, className, path }) {

@@ -60,18 +60,18 @@ function Project({ allProjectsData, t }) {
                   <div className="project-page_header">{allProjectsData.title}</div>
 
                   <div className="project-page_slider">
-                      { allProjectsData.images &&
-                    <ImageViewer images={getImages(allProjectsData.images)} /> }
+                    { allProjectsData.images &&
+                      <ImageViewer images={getImages(allProjectsData.images)} /> }
 
-                      <div className="slider_help"><Swipe /></div>
-                    </div>
+                    <div className="slider_help"><Swipe /></div>
+                  </div>
 
                   <div className="project-page_text">
-                      <div dangerouslySetInnerHTML={{ __html: allProjectsData.contentHtml }} />
-                    </div>
+                    <div dangerouslySetInnerHTML={{ __html: allProjectsData.contentHtml }} />
+                  </div>
 
                   <div className="project-page_buttons">
-                      {
+                    {
                       allProjectsData.github &&
                       <a
                         className="button button--download"
@@ -82,7 +82,7 @@ function Project({ allProjectsData, t }) {
                       </a>
                     }
 
-                      {
+                    {
                       allProjectsData.url &&
                       <a
                         className="button button button--projects"
@@ -92,7 +92,7 @@ function Project({ allProjectsData, t }) {
                         {t('live-view')}
                       </a>
                     }
-                    </div>
+                  </div>
                 </div>
               </div>
             </div>

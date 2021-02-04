@@ -4,9 +4,9 @@ import classNames from 'classnames'
 import { withTranslation } from '../i18n'
 import Head from '../components/head'
 import MainLayout from '../components/layouts/main'
-import Socials from '../components/socials'
-import ScrollDown from '../components/navigation/scroll-down'
-import ScrollToTop from '../components/navigation/scroll-to-top'
+// Import Socials from '../components/socials/socials'
+import ScrollDown from '../components/scroll/scroll-down'
+import ScrollToTop from '../components/scroll/scroll-to-top'
 import { getBGColor, getSortedProjectsData, radialGradient } from '../lib/projets'
 import { getScrollPosition, useScrollPosition } from '../components/effects/scroll'
 import JsonLd from '../components/json-ld'
@@ -80,7 +80,7 @@ function MainSection({ scrollTop, t }) {
       <div className="container-fluid">
         <div className="row">
           <div className="col align-self-center">
-            <Socials />
+            {/* <Socials />*/}
           </div>
 
           <div className="col-10 align-self-center">

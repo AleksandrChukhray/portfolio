@@ -52,57 +52,68 @@ function Home({ t }) {
                   <div className="contact-form_item contact-form_item--contacts">
                     <div className="contacts">
                       <div className="contacts_item contacts_item--email">
-                              <i className="fas fa-2x fa-envelope contacts_icon" />
+                        <i className="fas fa-2x fa-envelope contacts_icon" />
 
-                              <a
+                        <a
                           className="contacts_text"
                           href={`mailto:${config.email}`}
                         >{config.email}
                         </a>
-                            </div>
+                      </div>
 
                       <div className="contacts_item contacts_item--tel">
-                              <i className="fas fa-2x fa-phone-alt contacts_icon" />
+                        <i className="fas fa-2x fa-phone-alt contacts_icon" />
 
-                              <a
+                        <a
                           className="contacts_text"
                           href={`tel:${config.tel}`}
                         >{config.tel}
                         </a>
-                            </div>
+                      </div>
 
                       <div className="contacts_item contacts_item--instagram">
-                              <i className="fab fa-2x fa-instagram contacts_icon" />
+                        <i className="fab fa-2x fa-instagram contacts_icon" />
 
-                              <a
+                        <a
                           className="contacts_text"
                           href={config.instagramUrl}
                           target="_blank"
                         >{config.instagram}
                         </a>
-                            </div>
+                      </div>
 
                       <div className="contacts_item contacts_item--tg">
-                              <i className="fab fa-2x fa-telegram-plane contacts_icon" />
+                        <i className="fab fa-2x fa-telegram-plane contacts_icon" />
 
-                              <a
+                        <a
                           className="contacts_text"
                           href={config.telegramUrl}
                           target="_blank"
                         >@{config.telegram}
                         </a>
-                            </div>
+                      </div>
+
+                      <div className="contacts_item contacts_item--tg">
+                        <i className="fab fa-2x fa-linkedin contacts_icon" />
+
+                        <a
+                          className="contacts_text"
+                          href={config.linkedinUrl}
+                          target="_blank"
+                        >{config.linkedin}
+                        </a>
+                      </div>
 
                       <div className="contacts_item contacts_item--github">
-                              <i className="fab fa-2x fa-github contacts_icon" />
+                        <i className="fab fa-2x fa-github contacts_icon" />
 
-                              <a
+                        <a
                           className="contacts_text"
                           href={config.githubUrl}
                           target="_blank"
                         >{config.github}
                         </a>
-                            </div>
+                      </div>
                     </div>
                   </div>
 

@@ -1,2 +1,2 @@
-// jest.setup.js
+// Jest.setup.js
 import '@testing-library/jest-dom'

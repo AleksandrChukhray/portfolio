@@ -6,8 +6,6 @@ export function ProjectsImage({ projects, random }) {
   const projectName = projects[random]
   const result = drawResult(projectName)
 
-  // Console.log(result, projectName)
-
   const pointCorner = { width: result.radius,
     height: result.radius }
   const pointMiddle = { width: result.length,

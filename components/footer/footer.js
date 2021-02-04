@@ -1,4 +1,4 @@
-import Copyright from './copyright'
+import Copyright from '../copyright'
 
 function Footer() {
   return (<footer className="footer">

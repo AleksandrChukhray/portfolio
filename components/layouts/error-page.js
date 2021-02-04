@@ -1,4 +1,4 @@
-import Header from '../header'
+import Header from '../header/header'
 
 function ErrorLayout({ children }) {
   return (<div className="error-page">

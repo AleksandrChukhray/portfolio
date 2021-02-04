@@ -1,8 +1,8 @@
 import Link from 'next/link'
-import Copyright from './copyright'
-import { withTranslation } from '../i18n'
+import Copyright from '../copyright'
+import { withTranslation } from '../../i18n'
 
-function InnerFooter({ path, t }) {
+export function InnerFooter({ path, t }) {
 
   // TODO: Привести в надлежащий вид
   const getLink = (path) => (path === 'projects' ?
@@ -16,14 +16,14 @@ function InnerFooter({ path, t }) {
 
 
   return (<footer className="footer footer--inner">
-    <div className="go-back">
-      <div className="go-back_arrow" />
+        <div className="go-back">
+            <div className="go-back_arrow"/>
 
             <div className="go-back_text">{getLink(path)}</div>
-    </div>
+        </div>
 
-        <Copyright />
-  </footer>)
+        <Copyright/>
+    </footer>)
 }
 
 

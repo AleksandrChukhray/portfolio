@@ -77,7 +77,7 @@ export default function Project() {
                       ref={slider}
                     >
                       <div className="slider_item">
-                              <div className="slider_wrapper">
+                        <div className="slider_wrapper">
                           <img
                             alt=""
                             className="image"
@@ -88,10 +88,10 @@ export default function Project() {
                             <i className="far fa-2x fa-eye" />
                           </div>
                         </div>
-                            </div>
+                      </div>
 
                       <div className="slider_item">
-                              <div className="slider_wrapper">
+                        <div className="slider_wrapper">
                           <img
                             alt=""
                             className="image"
@@ -102,10 +102,10 @@ export default function Project() {
                             <i className="far fa-2x fa-eye" />
                           </div>
                         </div>
-                            </div>
+                      </div>
 
                       <div className="slider_item">
-                              <div className="slider_wrapper">
+                        <div className="slider_wrapper">
                           <img
                             alt=""
                             className="image"
@@ -116,10 +116,10 @@ export default function Project() {
                             <i className="far fa-2x fa-eye" />
                           </div>
                         </div>
-                            </div>
+                      </div>
 
                       <div className="slider_item">
-                              <div className="slider_wrapper">
+                        <div className="slider_wrapper">
                           <img
                             alt=""
                             className="image"
@@ -130,10 +130,10 @@ export default function Project() {
                             <i className="far fa-2x fa-eye" />
                           </div>
                         </div>
-                            </div>
+                      </div>
 
                       <div className="slider_item">
-                              <div className="slider_wrapper">
+                        <div className="slider_wrapper">
                           <img
                             alt=""
                             className="image"
@@ -144,10 +144,10 @@ export default function Project() {
                             <i className="far fa-2x fa-eye" />
                           </div>
                         </div>
-                            </div>
+                      </div>
 
                       <div className="slider_item">
-                              <div className="slider_wrapper">
+                        <div className="slider_wrapper">
                           <img
                             alt=""
                             className="image"
@@ -158,10 +158,10 @@ export default function Project() {
                             <i className="far fa-2x fa-eye" />
                           </div>
                         </div>
-                            </div>
+                      </div>
 
                       <div className="slider_item">
-                              <div className="slider_wrapper">
+                        <div className="slider_wrapper">
                           <img
                             alt=""
                             className="image"
@@ -172,7 +172,7 @@ export default function Project() {
                             <i className="far fa-2x fa-eye" />
                           </div>
                         </div>
-                            </div>
+                      </div>
                     </div>
                   </div>
 

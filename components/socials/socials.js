@@ -1,7 +1,7 @@
-import { i18n, withTranslation } from '../i18n'
-import config from '../lib/config'
+import { withTranslation } from '../../i18n'
+import config from '../../lib/config'
 
-function Socials({ t }) {
+export function Socials({ t, i18n }) {
   return (<div className="socials">
         <div className="socials_item socials_item--instagram">
             <a
@@ -32,6 +32,16 @@ function Socials({ t }) {
                 <i className="fab fa-2x fa-telegram-plane"/>
             </a>
         </div>
+          <div className="socials_item socials_item--linkedin">
+              <a
+                  href={`https://www.linkedin.com/in/${config.linkedin}/`}
+                  target="_blank"
+                  title={t('linkedin')}
+                  className="link"
+              >
+                  <i className="fab fa-2x fa-linkedin"/>
+              </a>
+          </div>
         <div className="socials_item socials_item--lang">
             <button
                 className="change-lang"

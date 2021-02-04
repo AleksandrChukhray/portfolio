@@ -66,10 +66,10 @@ function About({ t }) {
 
                     <Link href="/projects">
                       <a
-                              className="button button button--projects"
-                              href="/projects"
-                            >{ t('view') }
-                            </a>
+                        className="button button button--projects"
+                        href="/projects"
+                      >{ t('view') }
+                      </a>
                     </Link>
                   </div>
                 </div>

@@ -1,16 +1,13 @@
 import { createRef } from 'react'
-const $white = '#f7f7f7'
-const $black = '#1a1a1a'
+import { colors } from '../../lib/theme'
 
 const svg = createRef()
 
 function ScrollToTop({ scrollY }) {
 
-  // Console.log(Object.keys(svg.current));
-
   const style = {
-    stroke: $black,
-    fill: $white,
+    stroke: colors.$black,
+    fill: colors.$white,
     strokeWidth: 4,
     strokeLinecap: 'butt',
     strokeLinejoin: 'miter',

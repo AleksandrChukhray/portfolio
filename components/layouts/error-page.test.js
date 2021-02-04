@@ -1,42 +1,42 @@
-import React from 'react';
-import ErrorLayout from './error-page';
-import Header from '../header'
-import {shallow} from "enzyme";
+import React from 'react'
+import ErrorLayout from './error-page'
+import Header from '../header/header'
+import { shallow } from 'enzyme'
 
 describe('ErrorLayout component <ErrorLayout/>', () => {
-    it('render', () => {
-        const component = shallow(<ErrorLayout/>)
-        const wrapper = component.find('div.content-wrapper--error-page');
+  it('render', () => {
+    const component = shallow(<ErrorLayout />)
+    const wrapper = component.find('div.content-wrapper--error-page')
 
-        expect(wrapper.length).toBe(1);
-    });
+    expect(wrapper.length).toBe(1)
+  })
 
-    it('have class', () => {
-        const component = shallow(<ErrorLayout/>)
+  it('have class', () => {
+    const component = shallow(<ErrorLayout />)
 
-        const wrapper = component.find('div.content-wrapper--error-page');
+    const wrapper = component.find('div.content-wrapper--error-page')
 
-        expect(component.hasClass('error-page')).toBeTruthy();
-        expect(wrapper.length).toBe(1);
-    });
+    expect(component.hasClass('error-page')).toBeTruthy()
+    expect(wrapper.length).toBe(1)
+  })
 
-    it('render children elements', () => {
-        const component = shallow(<ErrorLayout>
-            <div className="some-element"/>
-        </ErrorLayout>)
+  it('render children elements', () => {
+    const component = shallow(<ErrorLayout>
+      <div className="some-element" />
+                              </ErrorLayout>)
 
-        const children = component.find('div.some-element');
+    const children = component.find('div.some-element')
 
-        expect(children.length).toBe(1);
-    });
+    expect(children.length).toBe(1)
+  })
 
-    it('have <Header/> component', () => {
-        const component = shallow(<ErrorLayout/>)
-        const header = component.find(Header);
+  it('have <Header/> component', () => {
+    const component = shallow(<ErrorLayout />)
+    const header = component.find(Header)
 
-        expect(header.length).toBe(1);
-    });
-});
+    expect(header.length).toBe(1)
+  })
+})
 
 /**
  * План тестирования компонента
