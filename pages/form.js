@@ -60,15 +60,6 @@ function Questionnaire({t}) {
 
     function onPrevHandler() {
         showQuestion(currentQuestion - 1)
-        toast(t('notification-success'), {
-            position: 'top-right',
-            autoClose: 5000,
-            hideProgressBar: false,
-            closeOnClick: true,
-            pauseOnHover: true,
-            draggable: true,
-            progress: undefined
-        })
     }
 
     function onNextHandler() {
