@@ -8,18 +8,19 @@
 
     .transform-text-left {
       width: 80vh;
-      left: calc(-42vh + 50px);
+      left: calc(-42vh + 40px);
     }
   }
 }
 
 .project-page {
-  width: 50%;
+  width: 60%;
   margin: 0 auto;
   position: relative;
 
   @media #{$viewport-768} {
     margin-top: 80px;
+    width: 80%;
   }
 
   &_slider {

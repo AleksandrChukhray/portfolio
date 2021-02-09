@@ -6,10 +6,19 @@
       width: 60%;
       margin: 0 auto;
       position: relative;
+
+      @media #{$viewport-768} {
+        width: 80%;
+      }
     }
 
     .container-fluid, .row {
       height: 100%;
+    }
+
+    .transform-text-left {
+      width: 80vh;
+      left: calc(-42vh + 40px);
     }
   }
 }

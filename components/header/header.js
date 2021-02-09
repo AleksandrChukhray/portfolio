@@ -2,6 +2,8 @@ import React from 'react'
 import Link from 'next/link'
 import { withTranslation } from '../../i18n'
 
+import useWindowSize from '../effects/resize';
+
 import Socials from '../socials/socials'
 import Copyright from '../copyright'
 import { addClass, fadeIn, fadeOut, removeClass } from '../../lib/fade'
@@ -18,78 +20,74 @@ const navigation = React.createRef()
 const navigationClose = React.createRef()
 const navigationSlides = React.createRef()
 
-class Header extends React.Component {
-  constructor(props) {
-    super(props)
+function Header ({ t }){
+  const { width, height } = useWindowSize();
 
-    this.onMenuClickHandler = (e) => {
-      e.preventDefault()
-      fadeOut(menu.current)
-      fadeIn(navigationClose.current)
-      fadeIn(menuList.current, 2000)
+  console.log(width, height)
 
-      navigation.current.style.display = 'flex'
+  const onMenuClickHandler = e => {
+    e.preventDefault()
+    fadeOut(menu.current)
+    fadeIn(navigationClose.current)
+    fadeIn(menuList.current, 2000)
 
-      navigationSlides.current.childNodes.forEach((el, key) => {
-        removeClass(el, 'animation-navigation-out')
-        addClass(el, 'animation-navigation-in')
-      })
-    }
+    navigation.current.style.display = 'flex'
 
-    this.onCloseClickHandler = (e) => {
-      e.preventDefault()
+    navigationSlides.current.childNodes.forEach((el, key) => {
+      removeClass(el, 'animation-navigation-out')
+      addClass(el, 'animation-navigation-in')
+    })
+  }
+  const onCloseClickHandler = e => {
+    e.preventDefault()
 
-      fadeIn(menu.current)
-      fadeOut(navigationClose.current)
-      fadeOut(menuList.current)
+    fadeIn(menu.current)
+    fadeOut(navigationClose.current)
+    fadeOut(menuList.current)
 
-      navigationSlides.current.childNodes.forEach((el, key) => {
-        removeClass(el, 'animation-navigation-in')
-        addClass(el, 'animation-navigation-out')
-      })
+    navigationSlides.current.childNodes.forEach((el, key) => {
+      removeClass(el, 'animation-navigation-in')
+      addClass(el, 'animation-navigation-out')
+    })
 
-      setTimeout(() => {
-        navigation.current.style.display = 'none'
-      }, 1100)
-    }
+    setTimeout(() => {
+      navigation.current.style.display = 'none'
+    }, 1100)
   }
 
-  render() {
-    const { t } = this.props
-
-    return (
+  return (
       <>
         <header className="header theme-light">
           <Logo />
 
           <Menu
-            menuRef={menu}
-            onClick={this.onMenuClickHandler}
+              menuRef={menu}
+              onClick={onMenuClickHandler}
           />
         </header>
 
         <div
-          className="navigation"
-          ref={navigation}
+            className="navigation"
+            ref={navigation}
         >
           <Slides ref={navigationSlides} />
 
           <Close
-            onClose={this.onCloseClickHandler}
-            ref={navigationClose}
+              onClose={onCloseClickHandler}
+              ref={navigationClose}
           />
 
           <div className="navigation_links">
             <div className="container-fluid">
               <div className="row">
                 <div className="col-1 align-self-center">
-                  <Socials />
+                  {width >= 1024 && <Socials />}
                 </div>
 
                 <div className="col-10 align-self-center">
                   <Navigation
-                    menuListRef={menuList}
-                    t={t}
+                      menuListRef={menuList}
+                      t={t}
                   />
                 </div>
 
@@ -97,12 +95,11 @@ class Header extends React.Component {
               </div>
             </div>
           </div>
-
+          {width < 1024 && <Socials className={'socials-links--horizontal'} />}
           <Copyright />
         </div>
       </>
-    )
-  }
+  )
 }
 
 export default withTranslation('header')(Header)

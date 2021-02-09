@@ -1,8 +1,9 @@
 import { withTranslation } from '../../i18n'
 import config from '../../lib/config'
+import classname from 'classnames'
 
-export function Socials({ t, i18n }) {
-  return (<div className="socials-links">
+export function Socials({ t, i18n, className }) {
+  return (<div className={classname('socials-links', className)}>
         <div className="socials-links_item socials-links_item--instagram">
             <a
                 href={`https://instagram.com/${config.instagram}`}
