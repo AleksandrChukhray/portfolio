@@ -5,6 +5,11 @@
     .container-fluid, .row {
       height: 100%;
     }
+
+    .transform-text-left {
+      width: 80vh;
+      left: calc(-42vh + 50px);
+    }
   }
 }
 
@@ -12,6 +17,10 @@
   width: 50%;
   margin: 0 auto;
   position: relative;
+
+  @media #{$viewport-768} {
+    margin-top: 80px;
+  }
 
   &_slider {
     &:hover {
@@ -46,6 +55,14 @@
       white-space: nowrap;
       overflow: hidden;
     }
+
+    @media #{$viewport-992} {
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      overflow: hidden;
+    }
+
+
   }
 
   &_text {

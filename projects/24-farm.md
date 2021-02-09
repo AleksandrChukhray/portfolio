@@ -20,6 +20,7 @@ images: '
 bgcImages: ''
 published: 'true'
 onMainPage: 'true'
+en: ''
 ---
 Интернет-магазин по продаже лекарственных препаратов.
 <br>

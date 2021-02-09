@@ -17,7 +17,7 @@
       .row > .col.align-self-center {
         align-self: flex-end !important;
 
-        .socials {
+        .socials-links {
           &_item {
             margin: 0 0 50px 0;
           }
@@ -44,6 +44,10 @@
   }
 
   &_img_wrap {
+    @media #{$viewport-480} {
+      //display: none
+    }
+
     @media #{$viewport-768} {
       flex: 1 1 100px;
       //max-width: 100px;

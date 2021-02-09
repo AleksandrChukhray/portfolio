@@ -14,5 +14,7 @@ bgcImages: '/static/img/posts/post1/bgc-post.jpg'
 published: 'false'
 onMainPage: 'false'
 ---
-
-- разработка функциона подобно tinder app
+<br>
+<br>
+Обязанности:
+ - разработка функционала подобно tinder app

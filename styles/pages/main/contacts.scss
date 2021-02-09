@@ -21,6 +21,10 @@
     font-size: 80px;
     line-height: 100px;
     color: $white;
+
+    @media #{$viewport-480} {
+      font-size: 70px;
+    }
   }
 
   &_sub-header {

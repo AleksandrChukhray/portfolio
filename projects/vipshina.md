@@ -27,3 +27,4 @@ onMainPage: 'false'
 <br>
 Обязанности:
 - верстка psd-макетов
+- интеграция верстки в cms prestashop

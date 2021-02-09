@@ -4,16 +4,16 @@
 @import "main/projects";
 
 @import "about/about";
-
 @import "form/form";
-
 @import "contact/contact";
-
 @import "error/error";
-
 @import "project/project";
-
 @import "project-list/project-list";
+
+
+html, body{
+  width: 100%;
+}
 
 .section {
   position: relative;

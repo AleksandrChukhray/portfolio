@@ -37,8 +37,19 @@ function getImages(images) {
   }))
 }
 
-function Project({ allProjectsData, t }) {
+function Project({ allProjectsData, t, i18n }) {
+  const {
+    en,
+    contentHtml,
+    name,
+    title,
+    images,
+    github,
+    url
+  } = allProjectsData
+
   const projectName = allProjectsData.name || 'project'
+  const html = i18n.language === 'en' && en ? en : contentHtml
 
   return (
     <InnerLayout
@@ -67,7 +78,7 @@ function Project({ allProjectsData, t }) {
                   </div>
 
                   <div className="project-page_text">
-                    <div dangerouslySetInnerHTML={{ __html: allProjectsData.contentHtml }} />
+                    <div dangerouslySetInnerHTML={{ __html: html }} />
                   </div>
 
                   <div className="project-page_buttons">

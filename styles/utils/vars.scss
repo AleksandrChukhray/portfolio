@@ -7,6 +7,7 @@ $xl-screen-min: 1400;
 // Media query points
 $screen-320-max: 320;
 $screen-480-max: 480;
+$screen-600-max: 600;
 $screen-768-max: 768;
 $screen-992-max: 992;
 $screen-1200-max: 1200;
@@ -14,6 +15,7 @@ $screen-1400-max: 1400;
 
 $viewport-320: "only screen and (max-width: #{$screen-320-max}px)";
 $viewport-480: "only screen and (max-width: #{$screen-480-max}px)";
+$viewport-600: "only screen and (max-width: #{$screen-600-max}px)";
 $viewport-768: "only screen and (max-width: #{$screen-768-max}px)";
 $viewport-992: "only screen and (max-width: #{$screen-992-max}px)";
 $viewport-1200: "only screen and (max-width: #{$screen-1200-max}px)";

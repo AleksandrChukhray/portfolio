@@ -22,6 +22,10 @@
   margin-left: 20%;
   position: relative;
 
+  @media #{$viewport-480} {
+    margin-top: 100px;
+  }
+
   @media #{$viewport-1200} {
     width: 90%;
     margin: 0 auto;

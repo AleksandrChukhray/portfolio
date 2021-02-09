@@ -103,7 +103,7 @@ function MainSection({ scrollTop, t }) {
                 <img
                   alt=""
                   className="main-text_img"
-                  src="/static/img/lion.png"
+                  src="/static/img/lion-min.png"
                 />
               </div>
             </div>

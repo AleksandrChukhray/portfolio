@@ -34,7 +34,7 @@ describe('Socials component <Socials/>', () => {
     const comp = mount(component(func))
 
     expect(comp.first('div').length).toBe(1)
-    expect(comp.find('div.socials_item').length).toBe(5)
+    expect(comp.find('div.socials-links_item').length).toBe(5)
 
     expect(comp.find('a.link').first().
       prop('href')).

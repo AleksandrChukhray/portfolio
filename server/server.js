@@ -95,17 +95,17 @@ app.
         }
       })
 
-      /*
-       * TODO: записывать логи отправки писем в отдельный файл
-       * Send mail with defined transport object
-       * Let info = await transporter.sendMail({
-       *     From: `<${msg.person_email}>`, // sender address
-       *     To: "zimmalex6@gmail.com", // list of receivers
-       *     Subject: "Заявка на собеседование", // Subject line
-       *     Text: "Заявка на собеседование", // plain text body
-       *     Html: generateTable(data) // html
-       * });
-       */
+
+       // TODO: записывать логи отправки писем в отдельный файл
+       // Send mail with defined transport object
+       let info = await transporter.sendMail({
+           From: `<${msg.person_email}>`, // sender address
+          To: "zimmalex6@gmail.com", // list of receivers
+          Subject: "Заявка на собеседование", // Subject line
+          Text: "Заявка на собеседование", // plain text body
+           Html: generateTable(data) // html
+       });
+
 
       // Console.log(info);
 
@@ -116,7 +116,7 @@ app.
       if (err) {
         throw err
       }
-      console.log('> Ready on http://localhost:3000')
+      console.log('> Ready on http://localhost:3001')
     })
   }).
   catch((ex) => {

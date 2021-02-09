@@ -63,6 +63,37 @@
     border: 1px solid $black;
     margin: 2px;
     overflow: hidden;
+
+    @media #{$viewport-480} {
+      &:first-child {
+        display: inline-flex;
+      }
+
+      &:nth-child(2) {
+        display: none !important;
+      }
+
+      display: none;
+    }
+
+    @media #{$viewport-768} {
+      &:first-child, &:nth-child(2) {
+        display: inline-flex;
+      }
+
+      &:nth-child(3) {
+        display: none !important;
+      }
+
+      display: none;
+    }
+
+    @media #{$viewport-1200} {
+      &:first-child, &:nth-child(2), &:nth-child(3) {
+        display: inline-flex;
+      }
+      display: none;
+    }
   }
 
   .point {

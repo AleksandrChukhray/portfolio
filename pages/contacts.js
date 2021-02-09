@@ -23,11 +23,12 @@ function Home({ t }) {
     'jobTitle': 'Middle frontend developer',
     'name': 'Alex Chukhrai',
     'telephone': '+38 (095) 10-99-021',
-    'url': 'https://',
+    'url': config.thisUrl,
     'sameAs': [
       config.instagramUrl,
       config.telegramUrl,
-      config.githubUrl
+      config.githubUrl,
+      config.linkedinUrl
     ]
   }
 

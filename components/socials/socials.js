@@ -2,8 +2,8 @@ import { withTranslation } from '../../i18n'
 import config from '../../lib/config'
 
 export function Socials({ t, i18n }) {
-  return (<div className="socials">
-        <div className="socials_item socials_item--instagram">
+  return (<div className="socials-links">
+        <div className="socials-links_item socials-links_item--instagram">
             <a
                 href={`https://instagram.com/${config.instagram}`}
                 target="_blank"
@@ -12,7 +12,7 @@ export function Socials({ t, i18n }) {
                 <i className="fab fa-2x fa-instagram"/>
             </a>
         </div>
-        <div className="socials_item socials_item--github">
+        <div className="socials-links_item socials-links_item--github">
             <a
                 href={`https://github.com/${config.github}`}
                 target="_blank"
@@ -22,7 +22,7 @@ export function Socials({ t, i18n }) {
                 <i className="fab fa-2x fa-github"/>
             </a>
         </div>
-        <div className="socials_item socials_item--tg">
+        <div className="socials-links_item socials-links_item--tg">
             <a
                 href={`https://t.me/${config.telegram}`}
                 target="_blank"
@@ -32,7 +32,7 @@ export function Socials({ t, i18n }) {
                 <i className="fab fa-2x fa-telegram-plane"/>
             </a>
         </div>
-          <div className="socials_item socials_item--linkedin">
+          <div className="socials-links_item socials-links_item--linkedin">
               <a
                   href={`https://www.linkedin.com/in/${config.linkedin}/`}
                   target="_blank"
@@ -42,7 +42,7 @@ export function Socials({ t, i18n }) {
                   <i className="fab fa-2x fa-linkedin"/>
               </a>
           </div>
-        <div className="socials_item socials_item--lang">
+        <div className="socials-links_item socials-links_item--lang">
             <button
                 className="change-lang"
                 type='button'

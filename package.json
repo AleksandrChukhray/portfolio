@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "min-image": "node ./lib/imagemin.js",
     "lint": "eslint --ext .js ./",
     "lint.fix": "eslint --fix --ext .js ./",
     "dev": "node ./server/server.js",
@@ -14,9 +15,9 @@
     "staging": "NODE_ENV=staging next",
     "start": "NODE_ENV=production node ./server/server.js"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "keywords": ["portfolio"],
+  "author": "Aleksandr Chukhrai",
+  "license": "MIT",
   "dependencies": {
     "@fortawesome/fontawesome-free": "^5.14.0",
     "@testing-library/jest-dom": "^5.11.9",
@@ -38,6 +39,8 @@
     "i18next": "^19.8.4",
     "i18next-browser-languagedetector": "^6.0.1",
     "i18next-http-backend": "^1.0.21",
+    "imagemin": "^7.0.1",
+    "imagemin-mozjpeg": "^9.0.0",
     "jest": "^26.6.3",
     "next": "^9.5.0",
     "next-i18next": "^7.0.1",
