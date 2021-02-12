@@ -9,13 +9,14 @@ export function Header({ currentView, modalProps }) {
     <div
       style={{
         alignItems: 'center',
-        backgroundColor: 'white',
+        // backgroundColor: 'white',
+        cursor: 'pointer',
         boxShadow: '0 1px 0 rgba(0, 0, 0, 0.1)',
         color: colors.N80,
         display: 'flex ',
         flex: '0 0 auto',
         height: 54,
-        justifyContent: 'flex-end',
+        justifyContent: 'center',
 
         [smallDevice]: {
           paddingLeft: 10,
@@ -32,7 +33,7 @@ export function Header({ currentView, modalProps }) {
       >
         <Button
           onClick={onClose}
-          style={{ paddingRight: 20 }}
+          style={{ paddingRight: 0 }}
         >
           <Close />
         </Button>
@@ -73,7 +74,7 @@ function Svg({ size, ...props }) {
         viewBox="0 0 24 24"
         style={{
             display: 'inline-block',
-            fill: 'currentColor',
+            fill: 'white',
             height: size,
             stroke: 'currentColor',
             strokeWidth: 0,

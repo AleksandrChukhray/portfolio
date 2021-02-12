@@ -1,4 +1,6 @@
-import {useState} from 'react'
+import React, {useState} from 'react'
+import DatePicker, { registerLocale, setDefaultLocale } from 'react-datepicker';
+import ru from 'date-fns/locale/ru'
 import {toast} from 'react-toastify'
 import {Field, Form} from 'react-final-form'
 import Head from '../components/head'
@@ -14,11 +16,42 @@ import {
 } from '../lib/validate'
 import {sendMail} from '../requests/email'
 
-function Questionnaire({t}) {
-    const [
-        currentQuestion,
-        showQuestion
-    ] = useState(0)
+// locales
+registerLocale('ru', ru)
+setDefaultLocale('ru')
+
+function Questionnaire({t, i18n}) {
+    const [currentQuestion, showQuestion] = useState(0)
+    const [dateTimeValue, onChangeDateTime] = useState();
+
+    const dateTimePickerProps = (input) =>  ({
+        onBlur: input.onBlur,
+        onFocus: input.onFocus,
+        selected: input.value,
+        onChange: input.onChange,
+        showTimeSelect: true,
+        disabledKeyboardNavigation: true,
+        timeFormat: "HH:mm",
+        timeIntervals: 30,
+        timeCaption: "time",
+        minDate: new Date(),
+        locale: i18n.language,
+        dateFormat: "d MMMM, yyyy HH:mm",
+        showPopperArrow: false,
+        popperPlacement: "bottom-center",
+        popperModifiers: {
+            offset: {
+                enabled: true,
+                offset: "5px, 10px"
+            },
+            preventOverflow: {
+                enabled: true,
+                escapeWithReference: false,
+                boundariesElement: "viewport"
+            }
+        }
+    })
+
     const isDisplay = (value, index) => ({
         display: value === index
             ? 'block'
@@ -74,12 +107,12 @@ function Questionnaire({t}) {
                 <div className="container-fluid">
                     <div className="row">
                         <div className="col align-self-center">
-                            <div className="transform-text-left page-text">
+                            <div className="transform-text-left transform-text-left--form page-text">
                                 {`${t('question')} ${currentQuestion + 1} ${t('of')} 6`}
                             </div>
                         </div>
-
                         <div className="col-10 align-self-center">
+
                             <Form
                                 onSubmit={onSubmit}
                                 render={({
@@ -312,7 +345,6 @@ function Questionnaire({t}) {
                                                                         type="text"
                                                                         placeholder={t('person-email-placeholder')}
                                                                     />
-
                                                                     {meta.error && meta.touched && <span
                                                                         className="form_required"
                                                                     >{meta.error}
@@ -341,43 +373,16 @@ function Questionnaire({t}) {
                                                     <div className="form_input form_input--input">
                                                         <Field
                                                             name="date_date"
-                                                            validate={composeValidators(required, minMaxValue(3)(20))}
+                                                            validate={composeValidators(required, minMaxValue(3)(70))}
                                                         >
                                                             {({input, meta}) =>
                                                                 <div>
-                                                                    <input
-                                                                        className="question_input input"
-                                                                        {...input}
-                                                                        type="text"
-                                                                        placeholder={t('date-date-placeholder')}
+                                                                    <DatePicker
+                                                                        {...dateTimePickerProps(input)}
                                                                     />
-
-                                                                    {meta.error && meta.touched && <span
-                                                                        className="form_required"
-                                                                    >{meta.error}
-                                                                                                       </span>}
-                                                                </div>}
-                                                        </Field>
-                                                    </div>
-                                                </div>
-
-                                                <div className="question_item">
-                                                    <label className="question_label">{t('date-time')}</label>
-
-                                                    <div className="form_input form_input--input">
-                                                        <Field
-                                                            name="date_time"
-                                                            validate={composeValidators(required, minMaxValue(3)(10))}
-                                                        >
-                                                            {({input, meta}) =>
-                                                                <div>
-                                                                    <input
-                                                                        className="question_input input"
-                                                                        {...input}
-                                                                        type="text"
-                                                                        placeholder={t('date-time-placeholder')}
-                                                                    />
-
+                                                                    {/*{*/}
+                                                                    {/*    console.log(form)*/}
+                                                                    {/*}*/}
                                                                     {meta.error && meta.touched && <span
                                                                         className="form_required"
                                                                     >{meta.error}
@@ -393,19 +398,22 @@ function Questionnaire({t}) {
                                                     >{t('date-duration')}
                                                     </label>
 
-                                                    <div className="form_input form_input--input">
+                                                    <div className="form_input form_input--select">
                                                         <Field
                                                             name="date_duration"
-                                                            validate={composeValidators(required, minMaxValue(3)(30))}
+                                                            validate={composeValidators(required, minMaxValue(1)(5))}
                                                         >
                                                             {({input, meta}) =>
                                                                 <div>
-                                                                    <input
-                                                                        className="question_input input"
+                                                                    <select
+                                                                        className="question_input select"
                                                                         {...input}
-                                                                        type="text"
-                                                                        placeholder={t('date-duration-placeholder')}
-                                                                    />
+                                                                    >
+                                                                        <option />
+                                                                        <option>0.5</option>
+                                                                        <option>1</option>
+                                                                        <option>1.5</option>
+                                                                    </select>
 
                                                                     {meta.error && meta.touched && <span
                                                                         className="form_required"
@@ -500,12 +508,12 @@ function Questionnaire({t}) {
                                                         >
                                                             {({input, meta}) =>
                                                                 <div>
-                                    <textarea
-                                        className="question_textarea input"
-                                        cols={30}
-                                        {...input}
-                                        placeholder={t('offer-description-placeholder')}
-                                    />
+                                                                    <textarea
+                                                                        className="question_textarea input"
+                                                                        cols={30}
+                                                                        {...input}
+                                                                        placeholder={t('offer-description-placeholder')}
+                                                                    />
 
                                                                     {meta.error && meta.touched && <span
                                                                         className="form_required"
@@ -575,26 +583,30 @@ function Questionnaire({t}) {
 
                                             <div className="question_body">
                                                 <div className="question_item">
-                                                    <div className="question_label">
-                                                        {'PrivatBank (USD):   '}
 
-                                                        <b>{config.privat_bank_USD}</b>
+                                                    <div className="question_label">
+                                                        <span className="bank">
+                                                            <span className="bank__name">{'PrivatBank (USD):   '}</span>
+                                                            <span className="bank__card-number"><b>{config.privat_bank_USD}</b></span>
+                                                        </span>
                                                     </div>
 
                                                     <br/>
 
                                                     <div className="question_label">
-                                                        {'PrivatBank (UAH):   '}
-
-                                                        <b>{config.privat_bank_UAH}</b>
+                                                        <span className="bank">
+                                                            <span className="bank__name">{'PrivatBank (UAH):   '}</span>
+                                                            <span className="bank__card-number"><b>{config.privat_bank_UAH}</b></span>
+                                                        </span>
                                                     </div>
 
                                                     <br/>
 
                                                     <div className="question_label">
-                                                        {'Payoneer (USD):   '}
-
-                                                        <b>{config.payoneer_USD}</b>
+                                                        <span className="bank">
+                                                            <span className="bank__name">{'Payoneer (USD):   '}</span>
+                                                            <span className="bank__card-number"><b>{config.payoneer_USD}</b></span>
+                                                        </span>
                                                     </div>
 
                                                     <br/>

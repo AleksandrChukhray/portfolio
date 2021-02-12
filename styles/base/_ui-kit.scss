@@ -175,6 +175,17 @@ h6, .h6 {
   margin: auto;
   transform-origin: center;
   transform: rotate(-90deg);
+
+  @media #{$viewport-480} {
+    display: none !important;
+  }
+
+  &--form {
+    @media #{$viewport-480} {
+      display: inline-block !important;
+    }
+  }
+
 }
 
 .form {
@@ -227,9 +238,20 @@ h6, .h6 {
     padding: 0 10px;
     border: 1px solid $black;
     position: relative;
+    min-height: 42px;
 
     &:last-child {
       margin: 0;
+    }
+
+    &--select {
+      select {
+        width: 100%;
+        background: transparent;
+        border: none;
+        font-family: $font-family-uni-neue;
+        min-height: 40px;
+      }
     }
 
     &--input {

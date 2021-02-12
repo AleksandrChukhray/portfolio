@@ -63,11 +63,7 @@ app.prepare().then(() => {
             },
             {
                 name: 'Дата',
-                value: msg.date_date
-            },
-            {
-                name: 'Время',
-                value: msg.date_time
+                value: msg.date_date.toLocaleString()
             },
             {
                 name: 'Продолжительность',

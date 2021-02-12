@@ -14,5 +14,9 @@
     height: 1px;
     line-height: 50px;
     background-color: $black;
+
+    @media #{$viewport-480} {
+      width: 50px;
+    }
   }
 }

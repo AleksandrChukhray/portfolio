@@ -9,6 +9,18 @@
 .section {
   &--main {
     overflow: hidden;
+
+    @media #{$viewport-768} {
+      background: url("/static/img/lion-min.png") 180px center no-repeat transparent;
+    }
+
+    @media #{$viewport-480} {
+      background-position: 100px center;
+      .col{
+        display: none;
+      }
+    }
+
     .container-fluid, .row {
       height: 100%;
     }
@@ -64,13 +76,7 @@
     }
 
     @media #{$viewport-768} {
-      position: absolute;
-      width: 600px;
-      height: auto;
-      top: 0;
-      bottom: 0;
-      left: -50px;
-      margin: auto;
+      display: none;
     }
   }
 

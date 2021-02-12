@@ -1,7 +1,7 @@
 {
-  "about": "About",
+  "about": "About me",
   "download": "Download my resume",
   "view": "View my works",
-  "text": "Hi I'm Aleksandr.\n A middle frontend developer.",
-  "sub-text": "Hello, my name is Aleksandr Chukhrai and I'm a frontend developer. I have a passion for the develop new things big or small. I also love coding and mathematics. I was born in Kherson, Ukraine and currently {{text, age}} of my age. I graduated at Kherson Technical State University with a degree in Bachelor of Science in Information Technology where I discovered my passion for problem solving with information technology. I am currently working as a freelancer. If you want to get started with your project and you need my help, fill free to contact me."
+  "text": "Hi, I'm Aleksandr.\n A middle frontend developer.",
+  "sub-text": "Hello, my name is Aleksandr Chukhrai, and I'm a frontend developer. I have a passion for developing new things - big or small. I also love coding and mathematics. I was born in Kherson, Ukraine, and now I am {{text, age}}. I graduated from Kherson Technical State University with a degree of Bachelor of Science in Information Technology, where I discovered my passion for solving problems using information technology. I am currently working as a freelancer. If you want to get started with your project and need my help, feel free to contact me."
 }

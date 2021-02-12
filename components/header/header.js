@@ -23,8 +23,6 @@ const navigationSlides = React.createRef()
 function Header ({ t }){
   const { width, height } = useWindowSize();
 
-  console.log(width, height)
-
   const onMenuClickHandler = e => {
     e.preventDefault()
     fadeOut(menu.current)

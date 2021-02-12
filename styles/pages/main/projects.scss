@@ -45,7 +45,7 @@
       }
 
       @media #{$viewport-480} {
-
+        width: 25px
       }
 
       @media #{$viewport-320} {
@@ -184,10 +184,11 @@
 
     @media #{$viewport-768} {
       margin-bottom: $margin;
+      width: 75px;
     }
 
     @media #{$viewport-480} {
-
+      width: 50px;
     }
 
     @media #{$viewport-320} {

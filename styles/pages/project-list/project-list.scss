@@ -44,6 +44,10 @@
   justify-content: center;
   align-content: center;
 
+  @media #{$viewport-480} {
+    height: 160px;
+  }
+
   &_project_wrap {
 
   }
@@ -51,8 +55,11 @@
   &_row {
     display: flex;
     flex-flow: row wrap;
-    //justify-content: center;
-    //align-content: center;
+    @media #{$viewport-480} {
+      &:last-child{
+        display: none;
+      }
+    }
   }
 
   &_item {
@@ -84,12 +91,23 @@
       &:nth-child(3) {
         display: none !important;
       }
-
-      display: none;
     }
 
     @media #{$viewport-1200} {
       &:first-child, &:nth-child(2), &:nth-child(3) {
+        display: inline-flex;
+      }
+
+      &:nth-child(4) {
+        display: none !important;
+      }
+    }
+
+    @media #{$viewport-1400} {
+      &:first-child,
+      &:nth-child(2),
+      &:nth-child(3),
+      &:nth-child(4) {
         display: inline-flex;
       }
       display: none;

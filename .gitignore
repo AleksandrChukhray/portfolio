@@ -21,3 +21,4 @@ yarn-error.log*
 /.idea/
 /todo.txt
 /lib/config.js
+/links-for-translate.txt
