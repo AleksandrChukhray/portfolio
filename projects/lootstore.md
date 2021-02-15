@@ -24,8 +24,21 @@ images: '
 bgcImages: ''
 published: 'true'
 onMainPage: 'true'
+en: '
+    <div>
+        <p>Online store of Dota2 and Counter-Strike game items.
+        <br>
+        <br>
+        Duties:</p>
+        <ul>
+            <li>coding mesmerizing psd layouts</li>
+            <li>creation of logic for displaying and animating images on the main page</li>
+        </ul>
+    </div>    
+
+    '
 ---
-Интернет-магазин по продаже игровых предметов Dota2 и Contre-Strike.
+Интернет-магазин по продаже игровых предметов Dota2 и Counter-Strike.
 <br>
 <br>
 Обязанности:

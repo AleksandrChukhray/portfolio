@@ -20,11 +20,24 @@ images: '
 bgcImages: ''
 published: 'true'
 onMainPage: 'true'
+en: '
+    <div>
+        <p>Business card website of the Internet company which provides retail and wholesale trade.
+        <br>
+        <br>
+        Duties:</p>
+        <ul>
+            <li>fixing minor bugs related to coding</li>
+            <li>website loading optimization</li>
+            <li>adding new pages to the website</li>
+        </ul>
+    </div>
+  '
 ---
-Сайт-визитка интернет-компании занимающейся розничной и оптовой торговлей. 
+Сайт-визитка интернет-компании занимающейся розничной и оптовой торговлей.
 <br>
 <br>
 Обязанности:
 - исправление мелких багов связанных с версткой
 - оптимизация загрузки сайта
-- добавление новых старниц на сайт
+- добавление новых страниц на сайт

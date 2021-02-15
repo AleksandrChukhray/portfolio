@@ -18,6 +18,27 @@ images: '
 bgcImages: ''
 published: 'true'
 onMainPage: 'false'
+en: '
+    Opencart module displaying pharmacies and working hours of pharmacies on Google maps.
+    <br>
+    <br>
+    Module functions:
+    - add/remove/view/edit pharmacies through the module admin panel
+    - output of the saved geolocations of pharmacies to the Google/Yandex map
+  
+    <div>
+        <p>Opencart module displaying pharmacies and working hours of pharmacies on Google maps.
+        <br>
+        <br>
+        Module functions:</p>
+        <ul>
+            <li>add/remove/view/edit pharmacies through the module admin panel</li>
+            <li>output of the saved geolocations of pharmacies to the Google/Yandex map</li>
+        </ul>
+    </div>    
+
+
+    '
 ---
 Opencart-модуль отображающий аптеки на google-карте и расписание работы аптек.
 <br>

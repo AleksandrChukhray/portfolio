@@ -19,6 +19,23 @@ images: '
 bgcImages: ''
 published: 'true'
 onMainPage: 'true'
+en: '
+    <div>
+        <p>Web application for ordering a taxi online.
+        <br>
+        <br>
+        Application functions:</p>
+        <ul>
+            <li>taxi ordering</li>
+            <li>create/edit/delete/view trip templates</li>
+            <li>travel history</li>
+            <li>displaying free/occupied cars on the map</li>
+            <li>displaying the trip route on the map</li>
+            <li>displaying the trip price depending on the route</li>
+            <li>displaying the time of arrival/waiting of the car</li>
+        </ul>
+    </div>
+'
 ---
 Web-приложение для заказа такси онлайн
 <br>

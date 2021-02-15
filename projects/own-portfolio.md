@@ -21,6 +21,20 @@ images: '
 bgcImages: ''
 published: 'true'
 onMainPage: 'true'
+en: '
+    <div>
+        <p>Portfolio website for a frontend programmer.
+        <br>
+        <br>
+        Duties:</p>
+        <ul>
+            <li>coding of layouts according to one of the favorite designs</li>
+            <li>integration of layout in reactjs and next.js</li>
+            <li>filling the website with information</li>
+            <li>website placement on hosting</li>
+        </ul>
+    </div>
+'
 ---
 Сайт-портфолио для фронтенд программиста.
 <br>

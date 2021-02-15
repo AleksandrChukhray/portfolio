@@ -20,6 +20,18 @@ images: '
 bgcImages: ''
 published: 'true'
 onMainPage: 'false'
+en: '
+    <div>
+        <p>Online store of GPS trackers.
+        <br>
+        <br>
+        Duties:</p>
+        <ul>
+            <li>website redesign</li>
+            <li>adding new functionality to the standard CMS OpenCart theme</li>
+        </ul>
+    </div>
+'
 ---
 Интернет-магазин по продаже gps-трекеров.
 <br>

@@ -20,6 +20,19 @@ images: '
 bgcImages: ''
 published: 'true'
 onMainPage: 'true'
+en: '
+    <div>
+        <p>Internet platform for finding the nearest restaurants using geolocation.
+        <br>
+        <br>
+        Duties:</p>
+        <ul>
+            <li>website design update</li>
+            <li>bug fixes</li>
+            <li>adding new functionality to the website</li>
+        </ul>
+    </div>
+  '
 ---
 Интернет-площадка по поиску ближайших ресторанов при помощи геологации.
 <br>

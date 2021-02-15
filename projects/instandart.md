@@ -20,9 +20,22 @@ images: '
 bgcImages: ''
 published: 'true'
 onMainPage: 'true'
+en: '
+    <div>
+        <p>Business card website of the web studio.
+        <br>
+        <br>
+        Duties:</p>
+        <ul>
+            <li>coding psd design layouts</li>
+            <li>integration into laravel</li>
+        </ul>
+    </div>
+  '
 ---
-Сайт-визитка веб-студии. 
+Сайт-визитка веб-студии.
 <br>
 <br>
 Обязанности:
-- верстка по макетам сайта компании
+- верстка psd макетов дизайна
+- интеграция в laravel

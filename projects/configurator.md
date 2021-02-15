@@ -18,15 +18,32 @@ images: '
 bgcImages: ''
 published: 'true'
 onMainPage: 'true'
+en: '
+    <div>
+        <p>Opencart module - PC configurator.
+        <br>
+        <br>
+        Module functions:</p>
+        <ul>
+            <li>displaying a list of store products when selecting a specific PC component, considering the previous selection
+      (if the user selects an AMD processor, he does not see motherboards for Intel processors)</li>
+            <li>adding the selected component to the configuration</li>
+            <li>displaying the total history of the selected configuration</li>
+            <li>adding all selected products to the cart</li>
+            <li>a discount system for buying goods for a certain amount</li>
+            <li>sending a message about the purchase with a table of selected components to the user</li>
+        </ul>
+    </div>
+'
 ---
 Opencart-модуль - конфигуратор PC.
 <br>
 <br>
 Функции модуля:
 - отображение списка товаров магазина при выборе определенного компонента PC, учитывая предыдущий выбор
-(если пользователь выбрал процессор AMD, ему не отображаются материнские платы для процессоров Intel)
+  (если пользователь выбрал процессор AMD, ему не отображаются материнские платы для процессоров Intel)
 - добавление выбранного компонента в конфигурацию
-- отображение общей сторимости выбранной конфигурации 
+- отображение общей сторимости выбранной конфигурации
 - добавление всех выбранных товаров в корзину
 - система скидок при покупке товара на определенную сумму
 - отправка сообщения пользователю о покупке с таблицей выбранных компонентов

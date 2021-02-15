@@ -21,6 +21,17 @@ images: '
 bgcImages: ''
 published: 'true'
 onMainPage: 'false'
+en: '
+    <div>
+        <p>Business card website of the web studio.
+        <br>
+        <br>
+        Duties:</p>
+        <ul>
+            <li>coding psd layouts</li>
+        </ul>
+    </div>
+  '
 ---
 Сайт-визитка веб-студии.
 <br>

@@ -18,6 +18,19 @@ images: '
 bgcImages: ''
 published: 'true'
 onMainPage: 'false'
+en: '
+    <div>
+        <p>Online store of LED displays.
+        <br>
+        <br>
+        Duties:</p>
+        <ul>
+            <li>fixing bugs on the website related to coding and scripts</li>
+            <li>updating prices by the WordPress module</li>
+            <li>minor fixes related to page display logic (Php)</li>
+        </ul>
+    </div>
+'
 ---
 Интернет-магазин по продаже светодиодных табло
 <br>

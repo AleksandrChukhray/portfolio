@@ -22,10 +22,22 @@ images: '
 bgcImages: ''
 published: 'true'
 onMainPage: 'false'
+en: '
+    <div>
+        <p>Blog of an Internet Marketer from Holland.
+        <br>
+        <br>
+        Duties:</p>
+        <ul>
+            <li>coding psd layouts</li>
+            <li>integration of layout on CMS WordPress</li>
+        </ul>
+    </div>    
+'
 ---
 Блог интернет-маркетолога из Голландии
 <br>
 <br>
-Обязанности: 
+Обязанности:
 - верстка psd-макетов
 - интеграция верстки на CMS Wordpress

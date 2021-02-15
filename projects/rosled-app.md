@@ -18,9 +18,24 @@ images: '
 bgcImages: ''
 published: 'true'
 onMainPage: 'false'
+en: '
+    <div>
+        <p>The web application that helps to select the appropriate size of the screen for the entered text, which will be displayed to the full width of the screen.
+        <br>
+        <br>
+        Application functions:</p>
+        <ul>
+            <li>selection of the appropriate screen size depending on the entered text</li>
+            <li>setting the size of the screen manually</li>
+            <li>selection of distance to the viewer</li>
+            <li>selection of text font</li>
+            <li>selection of text font size</li>
+            <li>selection of a specific text color</li>
+        </ul>
+    </div>
+  '
 ---
-Web-приложение позволяющее подобрать подходящий размер табло по введенному тексту, 
-который будет отображен на всю ширину табло.
+Web-приложение позволяющее подобрать подходящий размер табло по введенному тексту, который будет отображен на всю ширину табло.
 <br>
 <br>
 Функции приложения:

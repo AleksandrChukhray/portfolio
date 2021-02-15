@@ -20,7 +20,21 @@ images: '
 bgcImages: ''
 published: 'true'
 onMainPage: 'true'
-en: ''
+en: '
+    <div>
+        <p>Online store of medicinal products.
+        <br>
+        <br>
+        Duties:</p>
+        <ul>
+            <li>website development/support</li>
+            <li>design update</li>
+            <li>modules-update</li>
+            <li>adding new functionality to already installed modules</li>
+            <li>development of new modules</li>
+        </ul>
+    </div>
+  '
 ---
 Интернет-магазин по продаже лекарственных препаратов.
 <br>

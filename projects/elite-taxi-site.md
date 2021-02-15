@@ -20,6 +20,19 @@ images: '
 bgcImages: ''
 published: 'true'
 onMainPage: 'true'
+en: '
+    <div>
+        <p>Business card website for an elite taxi service in Kiev city.
+        <br>
+        <br>
+        Duties:</p>
+        <ul>
+            <li>website development/support</li>
+            <li>website design update</li>
+            <li>adding new functionality to the website</li>
+        </ul>
+    </div>
+'
 ---
 Сайт-визитка элитной службы такси в г.Киев
 <br>

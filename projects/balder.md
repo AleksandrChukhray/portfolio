@@ -20,6 +20,18 @@ images: '
 bgcImages: ''
 published: 'true'
 onMainPage: 'true'
+en: '
+    <div>
+        <p>Online store of video surveillance systems.
+        <br>
+        <br>
+        Duties:</p>
+        <ul>
+            <li>website design update</li>
+            <li>adding new functionality (frontend)</li>
+        </ul>
+    </div>
+'
 ---
 Интернет-магазин по продаже систем видеонаблюдения.
 <br>

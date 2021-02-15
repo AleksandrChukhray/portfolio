@@ -21,6 +21,25 @@ images: '
 bgcImages: ''
 published: 'true'
 onMainPage: 'false'
+en: '
+    Online store selling car tires and wheels of different sizes for different types of cars.
+    <br>
+    <br>
+    Duties:
+    - coding psd layouts
+    - integration of layout into cms PrestaShop
+  
+    <div>
+        <p>Online store selling car tires and wheels of different sizes for different types of cars.
+        <br>
+        <br>
+        Duties:</p>
+        <ul>
+            <li>coding psd layouts</li>
+            <li>integration of layout into cms PrestaShop</li>
+        </ul>
+    </div>
+'
 ---
 Интернет-магазин по продаже автомобильных шин и дисков разной величины для разных типов машин.
 <br>
