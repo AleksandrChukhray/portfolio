@@ -50,10 +50,6 @@ app.prepare().then(() => {
                 value: msg.person_last_name
             },
             {
-                name: 'Отчество',
-                value: msg.person_middle_name
-            },
-            {
                 name: 'Соц.сети',
                 value: msg.person_site
             },

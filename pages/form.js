@@ -150,7 +150,7 @@ function Questionnaire({t, i18n}) {
                                                     <div className="form_input form_input--input">
                                                         <Field
                                                             name="company_name"
-                                                            validate={composeValidators(required, minMaxValue(3)(30))}
+                                                            validate={composeValidators(required, minMaxValue(3)(100))}
                                                         >
                                                             {({input, meta}) =>
                                                                 <div>
@@ -179,7 +179,7 @@ function Questionnaire({t, i18n}) {
                                                     <div className="form_input form_input--input">
                                                         <Field
                                                             name="company_site"
-                                                            validate={composeValidators(required, minMaxValue(3)(30), isURL)}
+                                                            validate={composeValidators(required, minMaxValue(3)(100), isURL)}
                                                         >
                                                             {({input, meta}) =>
                                                                 <div>
@@ -225,7 +225,7 @@ function Questionnaire({t, i18n}) {
                                                     <div className="form_input form_input--input">
                                                         <Field
                                                             name="person_first_name"
-                                                            validate={composeValidators(required, minMaxValue(3)(30))}
+                                                            validate={composeValidators(required, minMaxValue(3)(100))}
                                                         >
                                                             {({input, meta}) =>
                                                                 <div>
@@ -254,7 +254,7 @@ function Questionnaire({t, i18n}) {
                                                     <div className="form_input form_input--input">
                                                         <Field
                                                             name="person_last_name"
-                                                            validate={composeValidators(required, minMaxValue(3)(30))}
+                                                            validate={composeValidators(required, minMaxValue(3)(100))}
                                                         >
                                                             {({input, meta}) =>
                                                                 <div>
@@ -275,41 +275,12 @@ function Questionnaire({t, i18n}) {
                                                 </div>
 
                                                 <div className="question_item">
-                                                    <label
-                                                        className="question_label"
-                                                    >{t('person-middle-name')}
-                                                    </label>
-
-                                                    <div className="form_input form_input--input">
-                                                        <Field
-                                                            name="person_middle_name"
-                                                            validate={composeValidators(required, minMaxValue(3)(30))}
-                                                        >
-                                                            {({input, meta}) =>
-                                                                <div>
-                                                                    <input
-                                                                        className="question_input input"
-                                                                        {...input}
-                                                                        type="text"
-                                                                        placeholder={t('person-middle-name-placeholder')}
-                                                                    />
-
-                                                                    {meta.error && meta.touched && <span
-                                                                        className="form_required"
-                                                                    >{meta.error}
-                                                                                                       </span>}
-                                                                </div>}
-                                                        </Field>
-                                                    </div>
-                                                </div>
-
-                                                <div className="question_item">
                                                     <label className="question_label">{t('person-site')}</label>
 
                                                     <div className="form_input form_input--input">
                                                         <Field
                                                             name="person_site"
-                                                            validate={composeValidators(required, minMaxValue(3)(30), isURL)}
+                                                            validate={composeValidators(required, minMaxValue(3)(200), isURL)}
                                                         >
                                                             {({input, meta}) =>
                                                                 <div>
@@ -335,7 +306,7 @@ function Questionnaire({t, i18n}) {
                                                     <div className="form_input form_input--input">
                                                         <Field
                                                             name="person_email"
-                                                            validate={composeValidators(required, minMaxValue(3)(30), isEmail)}
+                                                            validate={composeValidators(required, minMaxValue(3)(100), isEmail)}
                                                         >
                                                             {({input, meta}) =>
                                                                 <div>
@@ -373,7 +344,7 @@ function Questionnaire({t, i18n}) {
                                                     <div className="form_input form_input--input">
                                                         <Field
                                                             name="date_date"
-                                                            validate={composeValidators(required, minMaxValue(3)(70))}
+                                                            validate={composeValidators(required, minMaxValue(3)(100))}
                                                         >
                                                             {({input, meta}) =>
                                                                 <div>
@@ -446,7 +417,7 @@ function Questionnaire({t, i18n}) {
                                                     <div className="form_input form_input--input">
                                                         <Field
                                                             name="offer_position"
-                                                            validate={composeValidators(required, minMaxValue(3)(30))}
+                                                            validate={composeValidators(required, minMaxValue(3)(100))}
                                                         >
                                                             {({input, meta}) =>
                                                                 <div>
@@ -475,7 +446,7 @@ function Questionnaire({t, i18n}) {
                                                     <div className="form_input form_input--input">
                                                         <Field
                                                             name="offer_salary"
-                                                            validate={composeValidators(required, minMaxValue(3)(30))}
+                                                            validate={composeValidators(required, minMaxValue(3)(100))}
                                                         >
                                                             {({input, meta}) =>
                                                                 <div>
@@ -504,7 +475,7 @@ function Questionnaire({t, i18n}) {
                                                     <div className="form_input form_input--textarea">
                                                         <Field
                                                             name="offer_description"
-                                                            validate={composeValidators(required, minMaxValue(3)(500))}
+                                                            validate={composeValidators(required, minMaxValue(3)(2000))}
                                                         >
                                                             {({input, meta}) =>
                                                                 <div>
@@ -546,7 +517,7 @@ function Questionnaire({t, i18n}) {
                                                     <div className="form_input form_input--input">
                                                         <Field
                                                             name="source_source"
-                                                            validate={composeValidators(required, minMaxValue(3)(30))}
+                                                            validate={composeValidators(required, minMaxValue(3)(100))}
                                                         >
                                                             {({input, meta}) =>
                                                                 <div>
