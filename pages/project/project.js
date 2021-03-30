@@ -52,7 +52,7 @@ export default function Project() {
         }
       ]
     })
-  })
+  }, [])
 
   return (
     <InnerLayout clasName="project-page">

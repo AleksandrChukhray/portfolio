@@ -86,15 +86,6 @@ function Projects({ allProjectsData, t, random }) {
                   projects={imageData}
                   random={random}
                 />
-
-                {/* <img*/}
-
-                {/*    src="https://via.placeholder.com/1200x300?text=Projects+List"*/}
-
-                {/*    Alt=""*/}
-
-                {/*    ClassName="projects_image image"/>*/}
-
                 <div className="projects_filter">
                   <div className="filter">
                     {getAllFilters(data).map((el, index) => (<div

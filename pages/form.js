@@ -11,6 +11,7 @@ import {
     composeValidators,
     isEmail,
     isURL,
+    isPersonUrl,
     minMaxValue,
     required
 } from '../lib/validate'
@@ -280,7 +281,7 @@ function Questionnaire({t, i18n}) {
                                                     <div className="form_input form_input--input">
                                                         <Field
                                                             name="person_site"
-                                                            validate={composeValidators(required, minMaxValue(3)(200), isURL)}
+                                                            validate={composeValidators(required, minMaxValue(3)(200), isPersonUrl)}
                                                         >
                                                             {({input, meta}) =>
                                                                 <div>
@@ -351,9 +352,6 @@ function Questionnaire({t, i18n}) {
                                                                     <DatePicker
                                                                         {...dateTimePickerProps(input)}
                                                                     />
-                                                                    {/*{*/}
-                                                                    {/*    console.log(form)*/}
-                                                                    {/*}*/}
                                                                     {meta.error && meta.touched && <span
                                                                         className="form_required"
                                                                     >{meta.error}
